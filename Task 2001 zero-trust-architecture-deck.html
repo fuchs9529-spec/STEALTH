@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zero Trust Architecture — Deep Research Report</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<style>
+:root{
+  --navy:#0A1628;
+  --navy2:#11253F;
+  --teal:#00BFA6;
+  --teal-dim:#0E8C7C;
+  --ice:#E0F7F4;
+  --coral:#FF6B6B;
+  --amber:#FFC857;
+  --paper:#F8FAFC;
+  --ink:#0F172A;
+  --muted:#64748B;
+  --line:#1E3A5F;
+}
+.reveal{font-family:"Inter","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);}
+.reveal .slides section{text-align:left;padding:0 60px;}
+.reveal h1,.reveal h2,.reveal h3,.reveal h4{font-family:"Georgia","Times New Roman",serif;font-weight:700;color:var(--navy);letter-spacing:-0.01em;text-transform:none;margin-bottom:.4em;}
+.reveal h1{font-size:2.6em;line-height:1.1;}
+.reveal h2{font-size:1.7em;line-height:1.15;}
+.reveal h3{font-size:1.15em;color:var(--teal-dim);}
+.reveal p, .reveal li{font-size:.66em;line-height:1.55;}
+.reveal ul{margin-left:1.2em;}
+.reveal li{margin-bottom:.25em;}
+.reveal small{color:var(--muted);}
+.reveal strong{color:var(--navy);}
+.reveal em{color:var(--teal-dim);font-style:normal;font-weight:600;}
+.reveal .footer{position:absolute;bottom:18px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font-size:.42em;color:var(--muted);border-top:1px solid #E2E8F0;padding-top:8px;}
+.reveal .footer .tag{color:var(--teal-dim);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85em;}
+.reveal .footer .pgnum{color:var(--muted);}
+.reveal .eyebrow{color:var(--teal);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.42em;margin-bottom:14px;display:block;}
+.reveal .kicker{color:var(--coral);font-weight:600;font-size:.5em;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;display:block;}
+
+/* Dark slides */
+.dark{background:linear-gradient(135deg,var(--navy) 0%, #061021 100%);color:#E2E8F0;}
+.dark h1,.dark h2,.dark h3,.dark h4{color:#FFFFFF;}
+.dark strong{color:#FFFFFF;}
+.dark p,.dark li{color:#CBD5E1;}
+.dark .eyebrow{color:var(--teal);}
+.dark em{color:var(--teal);}
+.dark .footer{color:#475569;border-top-color:#1E3A5F;}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
+.cols-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;}
+.cols-2-1{display:grid;grid-template-columns:2fr 1fr;gap:30px;}
+.cols-1-2{display:grid;grid-template-columns:1fr 2fr;gap:30px;}
+
+/* Cards */
+.card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px 20px;box-shadow:0 1px 2px rgba(15,23,42,.04);}
+.card-dark{background:rgba(255,255,255,.04);border:1px solid #1E3A5F;border-radius:12px;padding:18px 20px;}
+.card h4{font-size:.7em;margin-bottom:6px;color:var(--navy);}
+.card .num{font-family:"Georgia",serif;font-size:1.9em;color:var(--teal-dim);font-weight:700;line-height:1;display:block;margin-bottom:4px;}
+.card-dark h4{color:#FFFFFF;}
+.card-dark .num{color:var(--teal);}
+.card.accent{border-left:4px solid var(--teal);}
+.card.danger{border-left:4px solid var(--coral);}
+.card.warn{border-left:4px solid var(--amber);}
+
+.pill{display:inline-block;padding:3px 10px;border-radius:99px;background:var(--ice);color:var(--teal-dim);font-size:.45em;font-weight:600;letter-spacing:.05em;margin-right:6px;}
+.pill.dark{background:rgba(0,191,166,.15);color:var(--teal);}
+.pill.danger{background:#FEE2E2;color:#B91C1C;}
+.pill.amber{background:#FEF3C7;color:#92400E;}
+
+/* Stat */
+.stat{font-family:"Georgia",serif;font-weight:700;color:var(--teal-dim);font-size:2.6em;line-height:1;}
+.dark .stat{color:var(--teal);}
+.stat-label{color:var(--muted);font-size:.5em;margin-top:6px;display:block;text-transform:uppercase;letter-spacing:.06em;}
+
+/* Tables */
+.tbl{width:100%;border-collapse:collapse;font-size:.6em;}
+.tbl th{text-align:left;padding:8px 10px;background:var(--navy);color:#FFFFFF;font-weight:600;font-size:.95em;letter-spacing:.03em;}
+.tbl td{padding:8px 10px;border-bottom:1px solid #E2E8F0;vertical-align:top;}
+.tbl tr:nth-child(even) td{background:#F8FAFC;}
+
+/* Title slide */
+.title-hero{display:flex;flex-direction:column;justify-content:center;height:100%;padding:0 80px;}
+.title-hero .meta{display:flex;gap:30px;color:#64748B;font-size:.45em;margin-top:30px;border-top:1px solid #1E3A5F;padding-top:18px;}
+
+/* Pillars block */
+.pillar{background:rgba(255,255,255,.04);border-top:3px solid var(--teal);padding:14px 16px;border-radius:6px;}
+.pillar h4{color:#FFFFFF;font-size:.65em;margin-bottom:4px;}
+.pillar p{font-size:.5em;color:#CBD5E1;margin:0;}
+.pillars-5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:10px;}
+.crosscut{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;}
+.crosscut .pillar{border-top-color:var(--amber);}
+
+/* Flow */
+.flow{display:flex;align-items:center;gap:10px;margin-top:16px;}
+.flow .node{flex:1;background:rgba(255,255,255,.05);border:1px solid #1E3A5F;border-radius:10px;padding:14px;text-align:center;}
+.flow .node h4{color:var(--teal);font-size:.55em;margin-bottom:4px;letter-spacing:.04em;}
+.flow .node p{font-size:.45em;color:#CBD5E1;margin:0;}
+.flow .arrow{color:var(--teal);font-size:1.4em;}
+
+/* Two-tone bar */
+.bar{height:8px;background:#E2E8F0;border-radius:4px;overflow:hidden;}
+.bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--teal-dim),var(--teal));}
+.bar-row{display:grid;grid-template-columns:120px 1fr 50px;align-items:center;gap:10px;margin-bottom:8px;font-size:.55em;color:var(--muted);}
+.bar-row .lbl{color:var(--ink);font-weight:600;}
+.bar-row .val{text-align:right;font-weight:600;color:var(--teal-dim);}
+
+.quote{font-family:"Georgia",serif;font-style:italic;color:#CBD5E1;font-size:.85em;border-left:3px solid var(--teal);padding:6px 0 6px 18px;margin:14px 0;}
+.dark .quote{color:#CBD5E1;}
+.light .quote{color:var(--ink);}
+
+.divider{height:1px;background:#1E3A5F;margin:18px 0;border:0;}
+.divider-light{height:1px;background:#E2E8F0;margin:18px 0;border:0;}
+
+.kbd{font-family:"Consolas",monospace;background:#0F172A;color:#E2E8F0;padding:2px 6px;border-radius:4px;font-size:.85em;}
+.dark .kbd{background:#000;}
+
+.legend-dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle;}
+
+ul.tight li{margin-bottom:.15em;}
+.note{color:var(--muted);font-size:.5em;font-style:italic;margin-top:6px;}
+.dark .note{color:#94A3B8;}
+
+/* Risk matrix */
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.risk{padding:14px;border-radius:10px;background:#FFFFFF;border:1px solid #E2E8F0;}
+.risk h4{font-size:.65em;margin-bottom:4px;}
+.risk p{font-size:.5em;margin:0;color:var(--muted);}
+.risk.high{border-top:4px solid var(--coral);}
+.risk.med{border-top:4px solid var(--amber);}
+.risk.low{border-top:4px solid var(--teal);}
+
+@media print { .reveal .slides section { page-break-after: always; } }
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<!-- Slide 1: Title -->
+<section class="dark" data-background-color="#0A1628">
+  <div class="title-hero">
+    <span class="eyebrow">Cybersecurity · Research Briefing</span>
+    <h1 style="color:#FFFFFF;font-size:3em;line-height:1.05;">Zero Trust Architecture</h1>
+    <h2 style="color:var(--teal);font-family:'Georgia',serif;font-weight:400;font-size:1.4em;border:0;">A Deep Research Report for the Startup Ecosystem</h2>
+    <p style="color:#94A3B8;font-size:.7em;margin-top:20px;max-width:760px;">
+      Principles · Implementation challenges · Benefits · Vulnerabilities ·
+      Application to text-based / API / LLM environments · Vendor landscape · Phased roadmap
+    </p>
+    <div class="meta">
+      <div><strong style="color:#FFF;">Prepared for</strong><br>Cybersecurity Startup Leadership</div>
+      <div><strong style="color:#FFF;">Frameworks</strong><br>NIST SP 800-207 · CISA ZTMM 2.0 · EO 14028 / M-22-09</div>
+      <div><strong style="color:#FFF;">Date</strong><br>May 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 2: Executive Summary -->
+<section>
+  <span class="eyebrow">01 · Executive Summary</span>
+  <h2>The thesis in one slide</h2>
+  <div class="cols" style="margin-top:14px;">
+    <div>
+      <p>Perimeter security is dead. The combination of remote work, SaaS sprawl, identity-centric attacks, and (for cybersecurity startups specifically) the need to <em>sell</em> a defensible security story to enterprise buyers makes Zero Trust the de-facto reference model for the next decade.</p>
+      <p><strong>What Zero Trust actually is:</strong> not a product, but an architectural philosophy — every access request is authenticated, authorized, encrypted, and continuously evaluated, regardless of network location.</p>
+      <p><strong>What this report delivers:</strong> a buyer-grade view of the principles, the proven implementation playbook, the costs, the failure modes, the vendor landscape, and a concrete 3-phase roadmap calibrated for a small cybersecurity team.</p>
+    </div>
+    <div>
+      <div class="card accent" style="margin-bottom:12px;">
+        <span class="num">246%</span>
+        <h4>3-year ROI</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">Forrester TEI study of Zero Trust adopters; payback &lt; 6 months on average.</p>
+      </div>
+      <div class="card accent" style="margin-bottom:12px;">
+        <span class="num">$1.76M</span>
+        <h4>Average breach-cost reduction</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">IBM / Ponemon comparison: orgs with mature ZT vs. without.</p>
+      </div>
+      <div class="card warn">
+        <span class="num">10%</span>
+        <h4>Large enterprises with <em>mature</em> ZT by end of 2026</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">Gartner 2025 Strategic Roadmap — up from &lt;1% in 2023.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Executive Summary</span><span class="pgnum">02 / 28</span></div>
+</section>
+
+<!-- Slide 3: Agenda -->
+<section>
+  <span class="eyebrow">02 · Agenda</span>
+  <h2>What we'll cover</h2>
+  <div class="cols-3" style="margin-top:18px;">
+    <div class="card">
+      <h4>I. Foundations</h4>
+      <ul class="tight" style="font-size:.55em;color:var(--muted);">
+        <li>Definition &amp; origin</li>
+        <li>NIST SP 800-207 tenets</li>
+        <li>Core logical components</li>
+        <li>CISA ZTMM 2.0 pillars</li>
+        <li>Reference architecture</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>II. Reality check</h4>
+      <ul class="tight" style="font-size:.55em;color:var(--muted);">
+        <li>Benefits, quantified</li>
+        <li>Implementation challenges</li>
+        <li>Known vulnerabilities</li>
+        <li>BeyondCorp case study</li>
+        <li>Okta 2023 breach lessons</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>III. Action plan</h4>
+      <ul class="tight" style="font-size:.55em;color:var(--muted);">
+        <li>ZT for text/API/LLM apps</li>
+        <li>Technical impact on infra</li>
+        <li>Vendor landscape</li>
+        <li>Cost &amp; ROI model</li>
+        <li>3-phase roadmap</li>
+        <li>Recommendations</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Agenda</span><span class="pgnum">03 / 28</span></div>
+</section>
+
+<!-- Slide 4: What is Zero Trust -->
+<section class="dark">
+  <span class="eyebrow">03 · Foundations</span>
+  <h2>What Zero Trust actually means</h2>
+  <div class="cols" style="margin-top:14px;">
+    <div>
+      <div class="quote">"Never trust, always verify. Every access request is authenticated, authorized, and continuously evaluated as if it originated from an untrusted network."</div>
+      <p style="margin-top:14px;">Zero Trust replaces the implicit trust granted by network location (inside the firewall = trusted) with <em>explicit, per-request, identity- and context-driven trust decisions</em>.</p>
+      <p>It is <strong>not</strong> a product, a VPN replacement, or an identity provider. It is an architectural philosophy implemented across identity, devices, networks, applications, and data — coordinated by a policy engine that consumes continuous telemetry.</p>
+    </div>
+    <div>
+      <h3 style="color:var(--teal);">Origin &amp; lineage</h3>
+      <ul class="tight">
+        <li><strong>2004</strong> — Jericho Forum: "de-perimeterization"</li>
+        <li><strong>2010</strong> — Forrester's John Kindervag coins "Zero Trust"</li>
+        <li><strong>2014</strong> — Google publishes the first BeyondCorp paper</li>
+        <li><strong>2020</strong> — NIST SP 800-207 codifies the architecture</li>
+        <li><strong>2021</strong> — U.S. EO 14028 mandates federal ZT adoption</li>
+        <li><strong>2022</strong> — OMB M-22-09 sets FY2024 deadlines</li>
+        <li><strong>2023</strong> — CISA Zero Trust Maturity Model v2.0</li>
+        <li><strong>2024-26</strong> — Mainstream enterprise adoption phase</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span class="tag" style="color:var(--teal);">Foundations</span><span class="pgnum">04 / 28</span></div>
+</section>
+
+<!-- Slide 5: Seven Tenets -->
+<section>
+  <span class="eyebrow">04 · Foundations</span>
+  <h2>NIST SP 800-207 — the seven tenets</h2>
+  <p style="font-size:.55em;color:var(--muted);margin-bottom:14px;">The philosophical core. Any architecture marketed as "Zero Trust" must satisfy all seven.</p>
+  <div class="cols-3" style="gap:14px;">
+    <div class="card accent" style="padding:14px;">
+      <h4><span style="color:var(--teal-dim);">①</span> Everything is a resource</h4>
+      <p style="font-size:.5em;color:var(--muted);margin:0;">Data sources, services, SaaS apps, IoT — all equally protected.</p>
+    </div>
+    <div class="card accent" style="padding:14px;">
+      <h4><span style="color:var(--teal-dim);">②</span> No location is trusted</h4>
+      <p style="font-size:.5em;color:var(--muted);margin:0;">Internal LAN ≠ trusted. All comms secured regardless of origin.</p>
+    </div>
+    <div class="card accent" style="padding:14px;">
+      <h4><span style="color:var(--teal-dim);">③</span> Per-session access</h4>
+      <p style="font-size:.5em;color:var(--muted);margin:0;">Each request authenticated &amp; authorized; never assume reuse.</p>
+    </div>
+    <div class="card accent" style="padding:14px;">
+      <h4><span style="color:var(--teal-dim);">④</span> Dynamic policy</h4>
+      <p style="font-size:.5em;color:var(--muted);margin:0;">Identity + device posture + behavior + risk score = decision.</p>
+    </div>
+    <div class="card accent" style="padding:14px;">
+      <h4><span style="color:var(--teal-dim);">⑤</span> Asset integrity monitored</h4>
+      <p style="font-size:.5em;color:var(--muted);margin:0;">Continuous diagnostics &amp; mitigation (CDM) across endpoints.</p>
+    </div>
+    <div class="card accent" style="padding:14px;">
+      <h4><span style="color:var(--teal-dim);">⑥</span> Authenticate before access</h4>
+      <p style="font-size:.5em;color:var(--muted);margin:0;">Strong identity &amp; resource auth required <em>before</em> connection.</p>
+    </div>
+    <div class="card accent" style="padding:14px;grid-column:span 3;">
+      <h4><span style="color:var(--teal-dim);">⑦</span> Telemetry feeds policy improvement</h4>
+      <p style="font-size:.5em;color:var(--muted);margin:0;">Collect everything about asset state, network, comms — feed it back into the policy engine to continuously improve security posture.</p>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">NIST SP 800-207</span><span class="pgnum">05 / 28</span></div>
+</section>
+
+<!-- Slide 6: Core Components -->
+<section class="dark">
+  <span class="eyebrow">05 · Foundations</span>
+  <h2>The three logical components</h2>
+  <p style="color:#CBD5E1;margin-top:6px;">Every Zero Trust deployment — regardless of vendor — implements this control-plane / data-plane split.</p>
+  <div class="flow">
+    <div class="node">
+      <h4>Policy Engine (PE)</h4>
+      <p>The brain. Consumes identity, device posture, threat intel, behavioral signals. Computes <em>allow / deny / step-up</em>.</p>
+    </div>
+    <div class="arrow">➜</div>
+    <div class="node">
+      <h4>Policy Administrator (PA)</h4>
+      <p>The translator. Converts the PE's decision into action — issues / revokes session tokens, configures the enforcement layer.</p>
+    </div>
+    <div class="arrow">➜</div>
+    <div class="node">
+      <h4>Policy Enforcement Point (PEP)</h4>
+      <p>The gatekeeper. Sits next to the resource (proxy, sidecar, agent, API gateway). Executes the PA's instruction in real time.</p>
+    </div>
+  </div>
+  <div style="margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <div>
+      <h3 style="color:var(--teal);">Inputs to the Policy Engine</h3>
+      <ul class="tight">
+        <li>IdP signals (user, group, MFA strength)</li>
+        <li>Device posture (EDR, patch state, compliance)</li>
+        <li>Threat intelligence feeds</li>
+        <li>Data classification labels</li>
+        <li>Behavioral / UEBA risk scores</li>
+        <li>Time, geolocation, network context</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--teal);">Critical design rule</h3>
+      <p>PE / PA are part of the <strong>control plane</strong> and must be isolated, hardened, and replicated. A compromise of the PE is functionally equivalent to a domain controller compromise in a legacy network.</p>
+    </div>
+  </div>
+  <div class="footer"><span class="tag" style="color:var(--teal);">Logical Components</span><span class="pgnum">06 / 28</span></div>
+</section>
+
+<!-- Slide 7: CISA pillars -->
+<section class="dark">
+  <span class="eyebrow">06 · Foundations</span>
+  <h2>CISA Zero Trust Maturity Model 2.0 — five pillars</h2>
+  <p style="color:#CBD5E1;">The U.S. federal reference. Each pillar matures across four levels: <span class="pill dark">Traditional</span> <span class="pill dark">Initial</span> <span class="pill dark">Advanced</span> <span class="pill dark">Optimal</span></p>
+  <div class="pillars-5">
+    <div class="pillar"><h4>Identity</h4><p>Phishing-resistant MFA, continuous authentication, identity federation, dynamic risk scoring.</p></div>
+    <div class="pillar"><h4>Devices</h4><p>Inventory of all endpoints, real-time compliance, EDR/XDR integration, posture as policy input.</p></div>
+    <div class="pillar"><h4>Networks</h4><p>Microsegmentation, encrypted east-west traffic, application-layer enforcement, no broadcast trust.</p></div>
+    <div class="pillar"><h4>Applications &amp; Workloads</h4><p>Per-app access, secure CI/CD, SBOM, API authorization, workload identity (SPIFFE/SPIRE).</p></div>
+    <div class="pillar"><h4>Data</h4><p>Classification, encryption in transit &amp; at rest, DLP, data-centric access control, audit lineage.</p></div>
+  </div>
+  <h3 style="color:var(--teal);margin-top:22px;">Three cross-cutting capabilities</h3>
+  <div class="crosscut">
+    <div class="pillar"><h4>Visibility &amp; Analytics</h4><p>Unified telemetry, SIEM/SOAR, anomaly detection across all pillars.</p></div>
+    <div class="pillar"><h4>Automation &amp; Orchestration</h4><p>Policy-as-code, automated response, IR playbooks, drift detection.</p></div>
+    <div class="pillar"><h4>Governance</h4><p>Policy lifecycle, compliance mapping, evidence collection, executive reporting.</p></div>
+  </div>
+  <div class="footer"><span class="tag" style="color:var(--teal);">CISA ZTMM 2.0</span><span class="pgnum">07 / 28</span></div>
+</section>
+
+<!-- Slide 8: Perimeter vs ZT -->
+<section>
+  <span class="eyebrow">07 · Foundations</span>
+  <h2>Perimeter security vs. Zero Trust</h2>
+  <table class="tbl" style="margin-top:14px;">
+    <thead><tr><th style="width:24%;">Dimension</th><th>Perimeter / "Castle &amp; Moat"</th><th>Zero Trust</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Trust model</strong></td><td>Implicit trust inside the network</td><td>Explicit, per-request, identity-driven</td></tr>
+      <tr><td><strong>Primary control</strong></td><td>Firewall, VPN</td><td>Identity-aware proxy + policy engine</td></tr>
+      <tr><td><strong>Access scope</strong></td><td>Broad network access once authenticated</td><td>Single-application, least-privilege</td></tr>
+      <tr><td><strong>Lateral movement</strong></td><td>Easy after one breach</td><td>Contained by microsegmentation</td></tr>
+      <tr><td><strong>User experience</strong></td><td>VPN client, jump hosts, friction</td><td>Direct browser access, SSO, transparent</td></tr>
+      <tr><td><strong>Visibility</strong></td><td>Coarse, network-level</td><td>Per-user, per-app, per-API call</td></tr>
+      <tr><td><strong>Attack surface</strong></td><td>Public VPN concentrators, exposed apps</td><td>No public endpoints; apps cloaked behind PEP</td></tr>
+      <tr><td><strong>Posture</strong></td><td>Detect after breach</td><td>Assume breach, limit blast radius</td></tr>
+    </tbody>
+  </table>
+  <div class="footer"><span class="tag">Comparison</span><span class="pgnum">08 / 28</span></div>
+</section>
+
+<!-- Slide 9: Benefits -->
+<section>
+  <span class="eyebrow">08 · Reality Check</span>
+  <h2>Benefits — quantified, not hand-waved</h2>
+  <div class="cols-3" style="margin-top:14px;">
+    <div class="card">
+      <span class="num">60-80%</span>
+      <h4>Breach probability reduction</h4>
+      <p style="font-size:.55em;color:var(--muted);">Driven by least-privilege access and identity-aware enforcement that neutralizes credential-theft attacks.</p>
+    </div>
+    <div class="card">
+      <span class="num">$1.76M</span>
+      <h4>Average breach savings</h4>
+      <p style="font-size:.55em;color:var(--muted);">Organizations with mature Zero Trust vs. those without (Ponemon / IBM data referenced across vendor reports).</p>
+    </div>
+    <div class="card">
+      <span class="num">246%</span>
+      <h4>3-year ROI</h4>
+      <p style="font-size:.55em;color:var(--muted);">Forrester Total Economic Impact study; payback in under 6 months for typical mid-market deployment.</p>
+    </div>
+  </div>
+  <div class="divider-light"></div>
+  <div class="cols-3">
+    <div>
+      <h3>Security outcomes</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Lateral movement contained</li>
+        <li>Ransomware blast radius shrunk</li>
+        <li>Insider threat mitigation</li>
+        <li>Phishing-resistant identity</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Operational outcomes</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>VPN retirement &amp; cost</li>
+        <li>Reduced help-desk tickets</li>
+        <li>Faster onboarding/offboarding</li>
+        <li>Unified policy across SaaS &amp; on-prem</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Business outcomes</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>SOC 2 / ISO 27001 evidence</li>
+        <li>Enterprise sales unlocks</li>
+        <li>Cyber-insurance premium reduction</li>
+        <li>M&amp;A integration speed</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Benefits</span><span class="pgnum">09 / 28</span></div>
+</section>
+
+<!-- Slide 10: Challenges -->
+<section>
+  <span class="eyebrow">09 · Reality Check</span>
+  <h2>The five implementation challenges that derail rollouts</h2>
+  <div class="cols" style="margin-top:14px;">
+    <div>
+      <div class="card danger" style="margin-bottom:10px;">
+        <h4>1 · Integration complexity</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">True ZT requires identity, network, endpoint, and data systems to share signals. Most enterprises have these in separate silos with no common data model.</p>
+      </div>
+      <div class="card danger" style="margin-bottom:10px;">
+        <h4>2 · Legacy systems</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">Mainframes, ICS, older COTS apps can't host agents, lack APIs, and assume implicit trust. Wrappers (proxies, jump boxes) are the only retrofit option.</p>
+      </div>
+      <div class="card danger" style="margin-bottom:10px;">
+        <h4>3 · User-experience friction</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">Aggressive MFA prompts, conditional-access blocks, and posture failures drive shadow IT. UX is a security control.</p>
+      </div>
+    </div>
+    <div>
+      <div class="card danger" style="margin-bottom:10px;">
+        <h4>4 · "Tools ≠ architecture"</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">Buying ZTNA + MFA + EDR does not create Zero Trust. Without a unified policy engine consuming all signals, you have isolated controls, not an architecture.</p>
+      </div>
+      <div class="card danger" style="margin-bottom:10px;">
+        <h4>5 · Timeline &amp; org buy-in</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">18–36 months for full enterprise rollout. Requires sustained executive sponsorship across IT, security, and business units — political fatigue is the #1 killer.</p>
+      </div>
+      <div class="card warn">
+        <h4>Adoption reality (Gartner 2025)</h4>
+        <p style="font-size:.55em;color:var(--muted);margin:0;">Only <strong>10%</strong> of large enterprises will have a <em>mature, measurable</em> ZT program by end of 2026 — up from &lt;1% in 2023.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Challenges</span><span class="pgnum">10 / 28</span></div>
+</section>
+
+<!-- Slide 11: Vulnerabilities -->
+<section class="dark">
+  <span class="eyebrow">10 · Reality Check</span>
+  <h2>Known vulnerabilities — what Zero Trust does <em>not</em> solve</h2>
+  <div class="cols-3" style="margin-top:14px;">
+    <div class="card-dark">
+      <h4 style="color:var(--coral);">IdP concentration risk</h4>
+      <p style="font-size:.55em;">A single Identity Provider becomes the auth core for every app. Compromise = total access. The Okta 2023 breach demonstrated this is not theoretical.</p>
+    </div>
+    <div class="card-dark">
+      <h4 style="color:var(--coral);">Session-token theft</h4>
+      <p style="font-size:.55em;">Stolen session tokens / OAuth refresh tokens bypass MFA. Attackers replay them as authenticated users. Mitigated only by token binding + device posture.</p>
+    </div>
+    <div class="card-dark">
+      <h4 style="color:var(--coral);">Policy engine compromise</h4>
+      <p style="font-size:.55em;">The PE is the new domain controller. If its policy store is mutated, attacker writes themselves a permanent allow-rule. Requires immutable audit + tamper-evident storage.</p>
+    </div>
+    <div class="card-dark">
+      <h4 style="color:var(--coral);">Misconfigured trust algorithm</h4>
+      <p style="font-size:.55em;">Overly permissive default policies, missing posture inputs, or stale risk scores create silent bypass paths invisible to standard audits.</p>
+    </div>
+    <div class="card-dark">
+      <h4 style="color:var(--coral);">Supply-chain &amp; third-party</h4>
+      <p style="font-size:.55em;">SaaS vendors, contractors, and support providers operate inside the trust boundary. ZT doesn't extend into the vendor's controls — only contracts &amp; SBOM do.</p>
+    </div>
+    <div class="card-dark">
+      <h4 style="color:var(--coral);">Encrypted-traffic blind spots</h4>
+      <p style="font-size:.55em;">Inline TLS inspection is contested (privacy, performance, certificate complexity). Without it, content-layer threats inside permitted sessions remain invisible.</p>
+    </div>
+  </div>
+  <p class="note" style="margin-top:16px;">The throughline: <strong style="color:#FFF;">Zero Trust shifts the attack surface from the network perimeter to the control plane.</strong> The control plane must be defended with the rigor formerly reserved for domain controllers.</p>
+  <div class="footer"><span class="tag" style="color:var(--teal);">Vulnerabilities</span><span class="pgnum">11 / 28</span></div>
+</section>
+
+<!-- Slide 12: BeyondCorp case -->
+<section>
+  <span class="eyebrow">11 · Case Study</span>
+  <h2>Google BeyondCorp — the canonical implementation</h2>
+  <div class="cols-2-1" style="margin-top:14px;">
+    <div>
+      <h3>What Google did</h3>
+      <p>Beginning ~2011, Google rebuilt internal access without VPN. Every employee request — from any network — routes through an identity-aware proxy that evaluates user identity, device certificate, device posture, and resource sensitivity before granting access to one application at a time.</p>
+
+      <h3 style="margin-top:14px;">What worked</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Eliminated VPN as a single point of failure and an attack surface</li>
+        <li>Made remote work indistinguishable from office work — UX win</li>
+        <li>Reduced lateral movement: a compromised laptop reaches one app, not the network</li>
+        <li>Created an enforceable per-app access audit trail</li>
+      </ul>
+
+      <h3 style="margin-top:14px;">What hurt — the "long tail"</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>The last 20% of workflows required disproportionate effort: oddball apps that didn't fit HTTPS, batch jobs, dev tooling, hardware</li>
+        <li>Asset-management data quality became existential — typos in device inventory silently revoked legitimate access</li>
+        <li>Required deep cross-functional change management — security alone could not deliver it</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card-dark" style="background:var(--navy);color:#FFF;padding:18px;">
+        <h4 style="color:#FFF;">Takeaway for startups</h4>
+        <p style="color:#CBD5E1;font-size:.55em;">Plan for the long tail from day one. Budget 80% of timeline for the last 20% of systems. Treat the device-inventory CMDB as a tier-0 security asset, not an IT-ops afterthought.</p>
+      </div>
+      <p class="note" style="margin-top:12px;">Source: Google BeyondCorp papers (2014, 2016) and USENIX <em>;login:</em> "BeyondCorp and the long tail of Zero Trust" (2023).</p>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Case · BeyondCorp</span><span class="pgnum">12 / 28</span></div>
+</section>
+
+<!-- Slide 13: Okta case -->
+<section>
+  <span class="eyebrow">12 · Case Study</span>
+  <h2>Okta 2023 — when the IdP becomes the attack vector</h2>
+  <div class="cols">
+    <div>
+      <h3>What happened</h3>
+      <p>October 2023: attackers used a stolen credential to access Okta's support case-management system, then harvested session tokens from customer-uploaded HAR files. With those tokens they impersonated authenticated sessions at Okta's customers — including BeyondTrust and Cloudflare.</p>
+
+      <h3 style="margin-top:14px;">What contained the blast</h3>
+      <p>Cloudflare's <em>internal</em> Zero Trust controls — hardware-key MFA, device posture, network segmentation — stopped the attacker from escalating, even though the attacker held a valid IdP session token. <strong>Zero Trust worked as designed: assume the IdP is compromised, limit what one valid session can do.</strong></p>
+    </div>
+    <div>
+      <h3>Lessons</h3>
+      <div class="card danger" style="padding:12px;margin-bottom:8px;">
+        <h4>Session tokens bypass MFA</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Treat tokens as bearer credentials. Bind to device, rotate aggressively, shorten lifetimes.</p>
+      </div>
+      <div class="card danger" style="padding:12px;margin-bottom:8px;">
+        <h4>IdP is the highest-value target</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Layer additional controls under SSO — don't make the IdP your only auth check.</p>
+      </div>
+      <div class="card danger" style="padding:12px;margin-bottom:8px;">
+        <h4>Detect breaches yourself</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Okta took 14 days to detect; customers (BeyondTrust, Cloudflare) detected first. Don't rely on vendor notification.</p>
+      </div>
+      <div class="card warn" style="padding:12px;">
+        <h4>Support-channel attack surface</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Sanitize HAR files. Vendor support workflows are part of your attack surface.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Case · Okta 2023</span><span class="pgnum">13 / 28</span></div>
+</section>
+
+<!-- Slide 14: Federal mandate -->
+<section class="dark">
+  <span class="eyebrow">13 · Market Context</span>
+  <h2>The federal mandate has reshaped the market</h2>
+  <div class="cols">
+    <div>
+      <h3 style="color:var(--teal);">Regulatory timeline</h3>
+      <ul class="tight">
+        <li><strong>May 2021</strong> — Executive Order 14028 issued post-SolarWinds. 60-day deadline for agency ZT plans.</li>
+        <li><strong>Jan 2022</strong> — OMB Memo M-22-09: federal ZT strategy with specific FY2024 targets across identity, devices, networks, applications, data.</li>
+        <li><strong>2023</strong> — CISA Zero Trust Maturity Model v2.0 published as implementation guide.</li>
+        <li><strong>2024-26</strong> — Agencies report measurable progress; contractors increasingly required to demonstrate alignment.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--teal);">Why this matters for a cybersecurity startup</h3>
+      <ul class="tight">
+        <li>Federal procurement is the largest single security buyer — ZT alignment is now a baseline RFP requirement, not a differentiator.</li>
+        <li>Cyber-insurance underwriters increasingly require ZT maturity attestation; coverage and premiums depend on it.</li>
+        <li>Enterprise buyers (financial services, healthcare, critical infrastructure) follow federal patterns within 12–24 months.</li>
+        <li>"We are Zero Trust aligned with CISA ZTMM Advanced" is now a measurable sales claim — vague claims will fail diligence.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span class="tag" style="color:var(--teal);">Regulatory Context</span><span class="pgnum">14 / 28</span></div>
+</section>
+
+<!-- Slide 15: ZT for Text/API/LLM -->
+<section>
+  <span class="eyebrow">14 · Application</span>
+  <h2>Zero Trust for text-based applications, APIs &amp; LLMs</h2>
+  <p style="color:var(--muted);font-size:.55em;">The original ZT model assumed humans accessing web apps. Today's text-driven systems — chatbots, RAG pipelines, agent frameworks, API gateways — extend the model in concrete ways.</p>
+  <div class="cols-3" style="margin-top:14px;">
+    <div class="card accent">
+      <h4>Identity beyond humans</h4>
+      <ul class="tight" style="font-size:.5em;">
+        <li>Workload identity (SPIFFE/SPIRE)</li>
+        <li>Short-lived API tokens with audience scope</li>
+        <li>Per-agent / per-model service accounts</li>
+        <li>mTLS between every microservice</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <h4>Per-prompt authorization</h4>
+      <ul class="tight" style="font-size:.5em;">
+        <li>Authorize each LLM call as a discrete request</li>
+        <li>Bind tool-use permissions to user context</li>
+        <li>Tenant isolation enforced at the gateway, not the model</li>
+        <li>Block prompt-injection-triggered privilege escalation</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <h4>Data-aware enforcement</h4>
+      <ul class="tight" style="font-size:.5em;">
+        <li>Output DLP scanning (PII, secrets, IP)</li>
+        <li>Retrieval filters: never expose docs above caller's clearance</li>
+        <li>Token-rate limits + anomaly detection</li>
+        <li>Full audit trail: who · what prompt · what output</li>
+      </ul>
+    </div>
+  </div>
+  <div class="divider-light"></div>
+  <p style="font-size:.6em;"><strong>Practical pattern:</strong> place an identity-aware gateway (e.g., LLM proxy, API gateway with policy engine) between every client and every model/tool endpoint. Every request carries verifiable identity, every response is scanned, and every interaction is logged for post-hoc forensics. <em>BSI / ANSSI guidance: "Design Principles for LLM-based Systems with Zero Trust" (2024) is the current reference.</em></p>
+  <div class="footer"><span class="tag">ZT for Text Apps</span><span class="pgnum">15 / 28</span></div>
+</section>
+
+<!-- Slide 16: Architecture for text apps -->
+<section class="dark">
+  <span class="eyebrow">15 · Application</span>
+  <h2>Reference architecture: text-based application stack</h2>
+  <div style="margin-top:14px;">
+    <div class="flow" style="margin-bottom:14px;">
+      <div class="node"><h4>User / Client</h4><p>Phishing-resistant MFA, device posture verified</p></div>
+      <div class="arrow">➜</div>
+      <div class="node"><h4>Identity-Aware Edge</h4><p>SSE / ZTNA proxy; per-app cloaking</p></div>
+      <div class="arrow">➜</div>
+      <div class="node"><h4>API Gateway</h4><p>Authn token + scoped authz; rate limit; schema validation</p></div>
+    </div>
+    <div class="flow">
+      <div class="node"><h4>LLM Proxy</h4><p>Prompt &amp; output filtering, DLP, prompt-injection detection</p></div>
+      <div class="arrow">➜</div>
+      <div class="node"><h4>Model / Tool Endpoint</h4><p>Workload identity (SPIFFE), least-privilege service account</p></div>
+      <div class="arrow">➜</div>
+      <div class="node"><h4>Data Tier</h4><p>RBAC + ABAC, encryption, retrieval filtered by caller clearance</p></div>
+    </div>
+    <hr class="divider">
+    <div class="cols-3">
+      <div><h3 style="color:var(--teal);">Control plane</h3><p style="font-size:.5em;color:#CBD5E1;">Policy engine consumes signals from every component; immutable audit log; SOAR responds to anomalies in seconds.</p></div>
+      <div><h3 style="color:var(--teal);">Observability</h3><p style="font-size:.5em;color:#CBD5E1;">Trace ID propagates from client through model invocation; every prompt and tool-use logged and replayable.</p></div>
+      <div><h3 style="color:var(--teal);">Failure mode</h3><p style="font-size:.5em;color:#CBD5E1;">Default deny. Policy-engine outage = no new sessions, existing short-lived tokens expire within minutes.</p></div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag" style="color:var(--teal);">Reference Architecture</span><span class="pgnum">16 / 28</span></div>
+</section>
+
+<!-- Slide 17: Technical impact -->
+<section>
+  <span class="eyebrow">16 · Technical Impact</span>
+  <h2>What Zero Trust will do to your existing infrastructure</h2>
+  <table class="tbl">
+    <thead><tr><th>Layer</th><th>What changes</th><th>Dependency / risk</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Identity</strong></td><td>Consolidate to single IdP; phishing-resistant MFA; lifecycle automation (SCIM, JIT provisioning).</td><td>IdP becomes tier-0. Need break-glass, secondary auth path, and tamper-evident audit.</td></tr>
+      <tr><td><strong>Network</strong></td><td>VPN retired or de-emphasized; identity-aware proxy fronts every app; east-west microsegmentation.</td><td>SD-WAN / SASE vendor lock-in. Latency on initial deployment. Legacy protocols (SMB, RDP) need bastions.</td></tr>
+      <tr><td><strong>Endpoints</strong></td><td>EDR/XDR mandatory; posture signals feed PE; BYOD treated as untrusted-by-default.</td><td>Agent fatigue on endpoints. Mac/Linux/mobile parity gaps. Unmanaged devices need browser-isolation alternative.</td></tr>
+      <tr><td><strong>Applications</strong></td><td>OIDC / SAML for every app; legacy apps front-ended by reverse proxy; API gateway enforcement.</td><td>"Long tail" of un-modernizable apps. Custom auth code becomes a liability. CI/CD pipelines need workload identity.</td></tr>
+      <tr><td><strong>Data</strong></td><td>Classification labels propagate to access decisions; DLP inline; encryption ubiquitous.</td><td>Discovery &amp; classification takes 6–18 months. False-positive DLP blocks legitimate workflows.</td></tr>
+      <tr><td><strong>Observability</strong></td><td>SIEM unified; signals from every PEP; SOAR automates responses.</td><td>Telemetry volume 3–10× growth → storage cost. Tuning to reduce alert fatigue.</td></tr>
+    </tbody>
+  </table>
+  <div class="footer"><span class="tag">Infra Impact</span><span class="pgnum">17 / 28</span></div>
+</section>
+
+<!-- Slide 18: Vendor Landscape -->
+<section>
+  <span class="eyebrow">17 · Vendors</span>
+  <h2>Vendor landscape — who plays where</h2>
+  <table class="tbl">
+    <thead><tr><th style="width:18%;">Category</th><th>Primary vendors</th><th>Best fit</th></tr></thead>
+    <tbody>
+      <tr><td><strong>ZTNA / SSE</strong></td><td>Zscaler (ZPA), Palo Alto (Prisma Access), Cloudflare One, Netskope, Cisco Duo Network Gateway, Check Point Harmony</td><td>Replacing VPN; secure remote access to internal apps</td></tr>
+      <tr><td><strong>ZTNA — SMB / startup</strong></td><td>Twingate, Tailscale, Cloudflare Access, Banyan Security, Pomerium (open source)</td><td>&lt;500 seats; cloud-native; pay-as-you-grow</td></tr>
+      <tr><td><strong>Identity (IdP)</strong></td><td>Okta, Microsoft Entra ID, Google Workspace, Ping Identity, JumpCloud</td><td>SSO + lifecycle + conditional access</td></tr>
+      <tr><td><strong>PAM (privileged access)</strong></td><td>CyberArk, BeyondTrust, Delinea, Teleport, StrongDM, HashiCorp Boundary</td><td>Admin access to infrastructure, DBs, K8s</td></tr>
+      <tr><td><strong>Microsegmentation</strong></td><td>Illumio, Akamai Guardicore, ColorTokens, Elisity, VMware NSX, Cisco Secure Workload</td><td>East-west traffic control, ransomware containment</td></tr>
+      <tr><td><strong>Endpoint / Device trust</strong></td><td>CrowdStrike, SentinelOne, Microsoft Defender XDR, Kolide, Jamf</td><td>Posture signals feeding the policy engine</td></tr>
+      <tr><td><strong>Data &amp; DLP</strong></td><td>Netskope, Forcepoint, Microsoft Purview, Symantec, Cyera (DSPM)</td><td>Classification + inline enforcement</td></tr>
+      <tr><td><strong>Policy / orchestration</strong></td><td>Open Policy Agent, Styra, HashiCorp Sentinel, Permit.io, Cerbos</td><td>Policy-as-code across heterogeneous PEPs</td></tr>
+    </tbody>
+  </table>
+  <p class="note">No single vendor delivers all five CISA pillars. Realistic stacks combine 4–7 categories with deep integration between them.</p>
+  <div class="footer"><span class="tag">Vendor Map</span><span class="pgnum">18 / 28</span></div>
+</section>
+
+<!-- Slide 19: Vendor deep dive -->
+<section>
+  <span class="eyebrow">18 · Vendors</span>
+  <h2>ZTNA — head-to-head for startup buyers</h2>
+  <table class="tbl">
+    <thead><tr><th>Vendor</th><th>Strengths</th><th>Watch-outs</th><th>Fit</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Zscaler ZPA</strong></td><td>Mature, large enterprise footprint, broad app coverage</td><td>Enterprise-only pricing; usually cost-prohibitive under 500 seats</td><td>Late-stage / enterprise</td></tr>
+      <tr><td><strong>Palo Alto Prisma Access</strong></td><td>ZTNA + CASB + advanced analytics in one platform</td><td>Heavy footprint; long deployment cycle; PA-firewall ecosystem dependency</td><td>Enterprise w/ existing PA estate</td></tr>
+      <tr><td><strong>Cloudflare One</strong></td><td>Fast global edge, simple deployment, generous free tier, strong dev-friendly APIs</td><td>Less mature DLP &amp; PAM features than legacy vendors</td><td>Cloud-native mid-market / startup ✓</td></tr>
+      <tr><td><strong>Twingate</strong></td><td>Fastest startup deploy (&lt; 1 hour), per-resource access, transparent pricing</td><td>Smaller ecosystem; not full SSE</td><td>SMB / early-stage startup ✓</td></tr>
+      <tr><td><strong>Tailscale</strong></td><td>WireGuard-based, dev-friendly, mesh networking, free tier</td><td>Networking-first (not full identity-aware policy); requires complement for full ZT</td><td>Engineering teams, dev/test ✓</td></tr>
+      <tr><td><strong>Pomerium</strong></td><td>Open source, self-hostable, OPA integration</td><td>Operational burden; smaller community</td><td>Cybersecurity startup with strong eng team ✓</td></tr>
+    </tbody>
+  </table>
+  <div class="footer"><span class="tag">ZTNA Comparison</span><span class="pgnum">19 / 28</span></div>
+</section>
+
+<!-- Slide 20: Cost model -->
+<section>
+  <span class="eyebrow">19 · Economics</span>
+  <h2>Cost &amp; ROI — what to budget</h2>
+  <div class="cols">
+    <div>
+      <h3>Implementation cost ranges</h3>
+      <ul class="tight">
+        <li><strong>SMB (&lt;100 seats):</strong> $30K – $80K incl. tooling + integration</li>
+        <li><strong>Mid-market (100–1,000):</strong> $80K – $200K typical</li>
+        <li><strong>Enterprise (1,000+):</strong> $500K – $5M+ over 18–36 months</li>
+      </ul>
+      <h3 style="margin-top:14px;">Cost composition</h3>
+      <div class="bar-row"><span class="lbl">Identity modernization</span><div class="bar"><span style="width:35%"></span></div><span class="val">30–40%</span></div>
+      <div class="bar-row"><span class="lbl">Microsegmentation</span><div class="bar"><span style="width:25%"></span></div><span class="val">20–25%</span></div>
+      <div class="bar-row"><span class="lbl">ZTNA / SSE</span><div class="bar"><span style="width:18%"></span></div><span class="val">15–20%</span></div>
+      <div class="bar-row"><span class="lbl">Endpoint / EDR</span><div class="bar"><span style="width:12%"></span></div><span class="val">10–15%</span></div>
+      <div class="bar-row"><span class="lbl">Prof. services / integ.</span><div class="bar"><span style="width:15%"></span></div><span class="val">10–15%</span></div>
+    </div>
+    <div>
+      <h3>ROI drivers</h3>
+      <div class="card" style="margin-bottom:8px;padding:12px;">
+        <h4>Breach-cost avoidance</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Avg. enterprise breach: $4.4M. ZT reduces probability 60–80%. Largest single ROI line item.</p>
+      </div>
+      <div class="card" style="margin-bottom:8px;padding:12px;">
+        <h4>VPN &amp; legacy infra retirement</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Often funds the ZTNA spend within 12–18 months.</p>
+      </div>
+      <div class="card" style="margin-bottom:8px;padding:12px;">
+        <h4>Help-desk &amp; productivity</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Fewer access tickets, faster onboarding, simpler remote work.</p>
+      </div>
+      <div class="card" style="margin-bottom:8px;padding:12px;">
+        <h4>Cyber-insurance premium</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">ZT-aligned orgs see 10–30% premium reduction; some insurers now require it.</p>
+      </div>
+      <div class="card accent" style="padding:12px;">
+        <h4>Enterprise sales unlock</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">For a cybersecurity startup, ZT posture is now a baseline diligence item in enterprise RFPs.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Economics</span><span class="pgnum">20 / 28</span></div>
+</section>
+
+<!-- Slide 21: Phase 1 -->
+<section>
+  <span class="eyebrow">20 · Roadmap</span>
+  <h2>Phase 1 (Months 0–3) — Foundations &amp; quick wins</h2>
+  <p style="color:var(--muted);font-size:.55em;">Goal: deliver visible security improvements without disrupting engineering velocity. Establish the identity &amp; visibility baseline that every later phase depends on.</p>
+  <div class="cols">
+    <div>
+      <h3>Workstream A · Identity</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Consolidate to a single IdP (Okta / Entra / Google)</li>
+        <li>Enforce phishing-resistant MFA (WebAuthn / hardware keys) for all admins; passkeys for all employees</li>
+        <li>SCIM-based lifecycle: JIT provisioning, instant offboarding</li>
+        <li>Map every SaaS app to SSO; deprecate local accounts</li>
+      </ul>
+      <h3 style="margin-top:10px;">Workstream B · Endpoint</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Deploy modern EDR (CrowdStrike, SentinelOne, or Defender XDR)</li>
+        <li>Enroll every device in MDM; baseline posture (disk encryption, OS patch, lock screen)</li>
+        <li>Block unmanaged devices from sensitive apps via conditional access</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Workstream C · Visibility</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Centralize logs in a SIEM (Sumo Logic / Panther / Elastic / Splunk)</li>
+        <li>Enable IdP, SaaS, endpoint, cloud-control-plane audit logs</li>
+        <li>Stand up basic detection rules: impossible travel, MFA fatigue, mass download, privilege escalation</li>
+      </ul>
+      <h3 style="margin-top:10px;">Deliverables</h3>
+      <div class="card" style="padding:12px;">
+        <ul class="tight" style="font-size:.5em;color:var(--muted);margin:0;">
+          <li>SSO + phishing-resistant MFA on 100% of SaaS</li>
+          <li>EDR on 100% of endpoints</li>
+          <li>Unified log lake with 90-day retention</li>
+          <li>Initial CISA ZTMM self-assessment baseline</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Phase 1 · Foundations</span><span class="pgnum">21 / 28</span></div>
+</section>
+
+<!-- Slide 22: Phase 2 -->
+<section>
+  <span class="eyebrow">21 · Roadmap</span>
+  <h2>Phase 2 (Months 4–9) — Access &amp; segmentation</h2>
+  <p style="color:var(--muted);font-size:.55em;">Goal: retire implicit network trust. Move from "VPN + firewall" to identity-aware, per-app access; introduce east-west segmentation for the highest-value workloads.</p>
+  <div class="cols">
+    <div>
+      <h3>Workstream A · ZTNA rollout</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Pilot a ZTNA platform (Cloudflare Access, Twingate, Tailscale, or Pomerium for cybersecurity startups)</li>
+        <li>Migrate apps in order: internal admin dashboards → engineering tools → SaaS proxying</li>
+        <li>Wire conditional access: identity + device posture + risk score → allow / step-up / deny</li>
+        <li>Decommission flat VPN access; keep only narrow break-glass</li>
+      </ul>
+      <h3 style="margin-top:10px;">Workstream B · Privileged access (PAM)</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Replace shared admin credentials with short-lived, recorded sessions (Teleport, StrongDM, HashiCorp Boundary)</li>
+        <li>Every prod-DB / K8s / cloud-console access goes through PAM</li>
+        <li>Audit every privileged command; alert on out-of-pattern behavior</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Workstream C · Workload identity &amp; segmentation</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Adopt SPIFFE/SPIRE (or cloud-native equivalent) for service-to-service identity</li>
+        <li>mTLS between every microservice; eliminate shared service-account keys</li>
+        <li>Microsegment the top 5 most sensitive workloads (Illumio, Cilium Network Policies, or cloud-native security groups)</li>
+      </ul>
+      <h3 style="margin-top:10px;">Deliverables</h3>
+      <div class="card" style="padding:12px;">
+        <ul class="tight" style="font-size:.5em;color:var(--muted);margin:0;">
+          <li>VPN traffic &lt; 10% of total remote access</li>
+          <li>100% privileged sessions go through PAM</li>
+          <li>Workload identity in all new services</li>
+          <li>Microsegmentation enforced around tier-0 data stores</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Phase 2 · Access</span><span class="pgnum">22 / 28</span></div>
+</section>
+
+<!-- Slide 23: Phase 3 -->
+<section>
+  <span class="eyebrow">22 · Roadmap</span>
+  <h2>Phase 3 (Months 10–18) — Data, automation, maturity</h2>
+  <p style="color:var(--muted);font-size:.55em;">Goal: reach CISA ZTMM "Advanced" across all five pillars. Make policy programmable, response automated, and data the unit of access control.</p>
+  <div class="cols">
+    <div>
+      <h3>Workstream A · Data-centric controls</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Data discovery &amp; classification (DSPM: Cyera, Wiz Data, Microsoft Purview)</li>
+        <li>Tag-driven access: ABAC enforced at the API gateway</li>
+        <li>Inline DLP on egress, especially for LLM outputs</li>
+        <li>End-to-end encryption with customer-managed keys for tier-0 data</li>
+      </ul>
+      <h3 style="margin-top:10px;">Workstream B · Policy-as-code</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>Open Policy Agent / Cerbos / Styra for centralized policy</li>
+        <li>Policy reviewed in Git; deployed through CI/CD</li>
+        <li>Continuous compliance: policy violations open Jira tickets automatically</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Workstream C · Automation &amp; resilience</h3>
+      <ul class="tight" style="font-size:.55em;">
+        <li>SOAR playbooks for top 10 alert types (Tines, Torq, Cortex XSOAR)</li>
+        <li>Auto-isolate compromised endpoints in seconds</li>
+        <li>Auto-revoke session tokens on posture failure</li>
+        <li>Tabletop exercise: simulate IdP compromise; validate break-glass path</li>
+      </ul>
+      <h3 style="margin-top:10px;">Deliverables</h3>
+      <div class="card accent" style="padding:12px;">
+        <ul class="tight" style="font-size:.5em;color:var(--muted);margin:0;">
+          <li>CISA ZTMM Advanced on Identity, Devices, Networks, Apps</li>
+          <li>Mean time to contain (MTTC) &lt; 1 hour</li>
+          <li>SOC 2 Type II / ISO 27001 evidence largely automated</li>
+          <li>Defensible "Zero Trust ready" story for enterprise sales</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Phase 3 · Maturity</span><span class="pgnum">23 / 28</span></div>
+</section>
+
+<!-- Slide 24: Risk matrix -->
+<section class="dark">
+  <span class="eyebrow">23 · Risk Mitigation</span>
+  <h2>Risk register for the rollout itself</h2>
+  <p style="color:#CBD5E1;">The most common reasons ZT programs fail. Build mitigations into the plan, not into the post-mortem.</p>
+  <div class="risk-grid" style="margin-top:14px;">
+    <div class="risk high" style="background:rgba(255,107,107,.08);border-color:#3a1f24;color:#FFF;"><h4 style="color:#FFF;">IdP outage / compromise</h4><p style="color:#CBD5E1;">Single IdP becomes total dependency. <strong style="color:#FFF;">Mitigation:</strong> break-glass admin path, secondary IdP for tier-0 services, immutable audit, signed admin actions.</p></div>
+    <div class="risk high" style="background:rgba(255,107,107,.08);border-color:#3a1f24;color:#FFF;"><h4 style="color:#FFF;">UX-driven shadow IT</h4><p style="color:#CBD5E1;">Friction drives bypass. <strong style="color:#FFF;">Mitigation:</strong> measure MFA prompt frequency, tune step-up policy by risk score, instrument workflow drop-off.</p></div>
+    <div class="risk high" style="background:rgba(255,107,107,.08);border-color:#3a1f24;color:#FFF;"><h4 style="color:#FFF;">Policy-engine misconfig</h4><p style="color:#CBD5E1;">Silent overpermissive defaults. <strong style="color:#FFF;">Mitigation:</strong> policy linting in CI, automated drift detection, quarterly red-team policy review.</p></div>
+    <div class="risk med" style="background:rgba(255,200,87,.08);border-color:#3a2f1a;color:#FFF;"><h4 style="color:#FFF;">Vendor lock-in</h4><p style="color:#CBD5E1;"><strong style="color:#FFF;">Mitigation:</strong> abstract policy in OPA, prefer open standards (OIDC, SCIM, SPIFFE), avoid proprietary policy languages.</p></div>
+    <div class="risk med" style="background:rgba(255,200,87,.08);border-color:#3a2f1a;color:#FFF;"><h4 style="color:#FFF;">Long-tail legacy apps</h4><p style="color:#CBD5E1;"><strong style="color:#FFF;">Mitigation:</strong> reverse-proxy retrofit, decom roadmap, accept residual risk with compensating controls.</p></div>
+    <div class="risk med" style="background:rgba(255,200,87,.08);border-color:#3a2f1a;color:#FFF;"><h4 style="color:#FFF;">Telemetry cost explosion</h4><p style="color:#CBD5E1;"><strong style="color:#FFF;">Mitigation:</strong> log-routing tier (Cribl), prioritized retention, hot/cold storage split, prune low-signal sources.</p></div>
+    <div class="risk low" style="background:rgba(0,191,166,.08);border-color:#0e3a35;color:#FFF;"><h4 style="color:#FFF;">Org change fatigue</h4><p style="color:#CBD5E1;"><strong style="color:#FFF;">Mitigation:</strong> phased rollout, quick wins first, executive sponsorship, internal champions per team.</p></div>
+    <div class="risk low" style="background:rgba(0,191,166,.08);border-color:#0e3a35;color:#FFF;"><h4 style="color:#FFF;">Audit / compliance gaps</h4><p style="color:#CBD5E1;"><strong style="color:#FFF;">Mitigation:</strong> map controls to SOC 2 / ISO 27001 / NIST 800-53 day 1; automate evidence collection.</p></div>
+    <div class="risk low" style="background:rgba(0,191,166,.08);border-color:#0e3a35;color:#FFF;"><h4 style="color:#FFF;">Skills gap</h4><p style="color:#CBD5E1;"><strong style="color:#FFF;">Mitigation:</strong> upskill via vendor training, hire 1 ZT-experienced lead, document runbooks as code.</p></div>
+  </div>
+  <div class="footer"><span class="tag" style="color:var(--teal);">Risk Register</span><span class="pgnum">24 / 28</span></div>
+</section>
+
+<!-- Slide 25: Best Practices -->
+<section>
+  <span class="eyebrow">24 · Best Practices</span>
+  <h2>Best practices for cybersecurity startups</h2>
+  <div class="cols">
+    <div>
+      <ol style="font-size:.6em;padding-left:1.4em;">
+        <li><strong>Start with identity.</strong> 30–40% of total ZT value comes from this pillar alone. Don't move on until SSO + phishing-resistant MFA + SCIM lifecycle are 100%.</li>
+        <li><strong>Treat the IdP as tier-0.</strong> Replicated, monitored with separate tooling, with documented break-glass. Don't trust the IdP to monitor itself.</li>
+        <li><strong>Buy ZTNA before you build it.</strong> Cloudflare One or Twingate is days of work; a homegrown identity-aware proxy is months. Save the build budget for product.</li>
+        <li><strong>Use policy-as-code from day 1.</strong> OPA, Cerbos, or vendor-native equivalents. Policies must be reviewed in Git, not in vendor consoles.</li>
+        <li><strong>Embrace standards.</strong> OIDC, SAML, SCIM, SPIFFE, OPA Rego. Anything proprietary is a future migration liability.</li>
+      </ol>
+    </div>
+    <div>
+      <ol start="6" style="font-size:.6em;padding-left:1.4em;">
+        <li><strong>Microsegment in concentric circles.</strong> Tier-0 data store first, then tier-1, then everything else. Don't try to segment the whole network on day one.</li>
+        <li><strong>Make UX a security metric.</strong> Track MFA prompts per user per day. If it climbs above ~5, your policy is wrong and shadow IT is forming.</li>
+        <li><strong>Tabletop the IdP compromise.</strong> Quarterly. Validate break-glass, secondary auth, key-rotation rituals work under pressure.</li>
+        <li><strong>Map controls to SOC 2 / ISO 27001 / NIST 800-53 early.</strong> The same effort that earns audit certifications opens enterprise sales.</li>
+        <li><strong>Ship "ZT-ready" as a sales story.</strong> Concrete CISA ZTMM levels per pillar; do not use vague "we are zero trust" claims that fail diligence.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Best Practices</span><span class="pgnum">25 / 28</span></div>
+</section>
+
+<!-- Slide 26: Recommendations -->
+<section class="dark">
+  <span class="eyebrow">25 · Recommendations</span>
+  <h2>Concrete recommendations for our startup</h2>
+  <div class="cols">
+    <div>
+      <h3 style="color:var(--teal);">Adopt — high confidence</h3>
+      <ul class="tight">
+        <li><strong>IdP:</strong> Okta or Microsoft Entra ID</li>
+        <li><strong>ZTNA:</strong> Cloudflare One (cost-effective &amp; cloud-native) or Twingate (fastest deploy)</li>
+        <li><strong>PAM:</strong> Teleport (engineering teams) or StrongDM</li>
+        <li><strong>EDR:</strong> CrowdStrike Falcon Go or SentinelOne Singularity Core</li>
+        <li><strong>SIEM:</strong> Panther or Sumo Logic (cloud-native, transparent pricing)</li>
+        <li><strong>Policy engine:</strong> Open Policy Agent + Styra (managed control plane)</li>
+        <li><strong>LLM gateway:</strong> Cloudflare AI Gateway or open-source LiteLLM with policy layer</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--teal);">Evaluate — pilot before committing</h3>
+      <ul class="tight">
+        <li><strong>Microsegmentation:</strong> Illumio (mature) vs. Cilium (cloud-native &amp; open source)</li>
+        <li><strong>DSPM:</strong> Cyera or Wiz Data</li>
+        <li><strong>SOAR:</strong> Tines or Torq</li>
+        <li><strong>Browser isolation</strong> for unmanaged-device access</li>
+      </ul>
+      <h3 style="color:var(--teal);margin-top:14px;">Defer — not yet right-sized for a startup</h3>
+      <ul class="tight">
+        <li>Heavy SSE suites (Palo Alto Prisma, Zscaler ZIA) — revisit at &gt;500 seats</li>
+        <li>Full data lineage / governance (Collibra, Alation) — Phase 3+</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span class="tag" style="color:var(--teal);">Recommendations</span><span class="pgnum">26 / 28</span></div>
+</section>
+
+<!-- Slide 27: Conclusion -->
+<section>
+  <span class="eyebrow">26 · Conclusion</span>
+  <h2>The bottom line</h2>
+  <div class="cols-2-1" style="margin-top:14px;">
+    <div>
+      <p>Zero Trust is no longer optional. The federal mandate, cyber-insurance underwriting, and enterprise buyer diligence have made it a baseline expectation — not a competitive differentiator. The economics are favorable: 246% three-year ROI, &lt; 6-month payback for typical mid-market deployments.</p>
+      <p>For a cybersecurity startup, the equation tilts further. <strong>You will be asked to demonstrate Zero Trust alignment in every enterprise sales cycle.</strong> Building this posture is therefore both an internal security investment <em>and</em> a go-to-market enabler.</p>
+      <p>The risk is not in adopting Zero Trust — it is in adopting it incoherently: buying isolated tools without a unified policy engine, neglecting the IdP as tier-0, and over-rotating into friction that breeds shadow IT. The roadmap in this report sequences the work to avoid those traps.</p>
+      <p><strong>Next step:</strong> approve Phase 1 budget and assign a single accountable owner. Three months from kickoff, we should be at "Initial" maturity on Identity, Devices, and Visibility — with measurable evidence to show.</p>
+    </div>
+    <div>
+      <div class="card accent" style="margin-bottom:10px;">
+        <span class="num">18 mo</span>
+        <h4>To CISA ZTMM "Advanced"</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Realistic timeline for a startup with focused execution.</p>
+      </div>
+      <div class="card accent" style="margin-bottom:10px;">
+        <span class="num">3 mo</span>
+        <h4>To first measurable wins</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">SSO + MFA + EDR + log lake. Visible to engineers, auditors, customers.</p>
+      </div>
+      <div class="card accent">
+        <span class="num">1</span>
+        <h4>Accountable owner</h4>
+        <p style="font-size:.5em;color:var(--muted);margin:0;">Programs without a single empowered owner fail. Identify them this week.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span class="tag">Conclusion</span><span class="pgnum">27 / 28</span></div>
+</section>
+
+<!-- Slide 28: References -->
+<section>
+  <span class="eyebrow">27 · References</span>
+  <h2>Source material</h2>
+  <div class="cols">
+    <div>
+      <h3>Standards &amp; government</h3>
+      <ul class="tight" style="font-size:.5em;">
+        <li>NIST SP 800-207: <em>Zero Trust Architecture</em> (2020)</li>
+        <li>NIST SP 800-207A: ZTA for Cloud-Native Apps (2023)</li>
+        <li>CISA Zero Trust Maturity Model v2.0 (April 2023)</li>
+        <li>U.S. Executive Order 14028 (May 2021)</li>
+        <li>OMB Memo M-22-09 — Federal ZT Strategy (Jan 2022)</li>
+        <li>DHS / CISA Zero Trust Architecture Implementation (Jan 2025)</li>
+        <li>BSI / ANSSI — <em>Design Principles for LLM-based Systems with Zero Trust</em> (2024)</li>
+      </ul>
+      <h3 style="margin-top:10px;">Industry research</h3>
+      <ul class="tight" style="font-size:.5em;">
+        <li>Gartner — 2025 Strategic Roadmap for Zero Trust</li>
+        <li>Forrester — Total Economic Impact of Zero Trust</li>
+        <li>IBM / Ponemon — Cost of a Data Breach Report</li>
+        <li>Cloud Security Alliance — Zero Trust in LLM Environments</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Case studies &amp; incidents</h3>
+      <ul class="tight" style="font-size:.5em;">
+        <li>Google — <em>BeyondCorp: A New Approach to Enterprise Security</em> (2014)</li>
+        <li>Google — <em>BeyondCorp: Design to Deployment</em> (2016)</li>
+        <li>USENIX <em>;login:</em> — "BeyondCorp and the long tail of Zero Trust"</li>
+        <li>Okta Security — Oct 2023 Support Unit Breach disclosure</li>
+        <li>BeyondTrust — Discovery &amp; response to Okta breach</li>
+        <li>Cloudflare — Post-incident analysis, Thanksgiving 2023</li>
+      </ul>
+      <h3 style="margin-top:10px;">Vendor &amp; technical references</h3>
+      <ul class="tight" style="font-size:.5em;">
+        <li>SPIFFE / SPIRE specifications</li>
+        <li>Open Policy Agent documentation</li>
+        <li>Cisco, Microsoft, Palo Alto, Zscaler, Cloudflare ZT solution briefs</li>
+        <li>Akamai Guardicore, Illumio, ColorTokens microsegmentation reference architectures</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note" style="margin-top:14px;">All claims in this deck trace to one or more sources above. Research conducted May 2026.</p>
+  <div class="footer"><span class="tag">References</span><span class="pgnum">28 / 28</span></div>
+</section>
+
+</div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: false,
+    width: 1280,
+    height: 720,
+    margin: 0.04,
+    minScale: 0.3,
+    maxScale: 1.6,
+    controls: true,
+    progress: true,
+    transition: 'none',
+  });
+</script>
+</body>
+</html>

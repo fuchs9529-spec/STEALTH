@@ -1,0 +1,180 @@
+{
+  "total_cases": 55,
+  "total_errors": 0,
+  "avg_judge_score": 0.7734,
+  "avg_rubric_score": 0.8336,
+  "avg_composite_score": 0.7915,
+  "by_domain": {
+    "support": {
+      "n_cases": 20,
+      "n_errors": 0,
+      "avg_judge_score": 0.9863,
+      "avg_rubric_score": 0.9833,
+      "avg_composite_score": 0.9854,
+      "dimension_averages": {
+        "accuracy": 0.9219,
+        "empathy": 1.0,
+        "completeness": 1.0,
+        "actionability": 1.0,
+        "safety": 1.0
+      },
+      "by_difficulty": {
+        "easy": 0.9942,
+        "medium": 0.9777,
+        "hard": 0.9869
+      },
+      "score_distribution": {
+        "0-20": 0,
+        "20-40": 0,
+        "40-60": 0,
+        "60-80": 0,
+        "80-100": 20
+      }
+    },
+    "summarization": {
+      "n_cases": 17,
+      "n_errors": 0,
+      "avg_judge_score": 0.6949,
+      "avg_rubric_score": 0.8196,
+      "avg_composite_score": 0.7323,
+      "dimension_averages": {
+        "faithfulness": 0.9412,
+        "coverage": 0.9821,
+        "conciseness": 0.65,
+        "coherence": 0.3529
+      },
+      "by_difficulty": {
+        "easy": 0.8312,
+        "medium": 0.7612,
+        "hard": 0.7741,
+        "edge_case": 0.4
+      },
+      "score_distribution": {
+        "0-20": 0,
+        "20-40": 1,
+        "40-60": 1,
+        "60-80": 9,
+        "80-100": 6
+      }
+    },
+    "coding": {
+      "n_cases": 18,
+      "n_errors": 0,
+      "avg_judge_score": 0.6111,
+      "avg_rubric_score": 0.6806,
+      "avg_composite_score": 0.6319,
+      "dimension_averages": {
+        "correctness": 0.6111,
+        "code_quality": 0.6,
+        "clarity": 0.5577,
+        "edge_case_handling": 0.6562
+      },
+      "by_difficulty": {
+        "easy": 0.7217,
+        "medium": 0.665,
+        "hard": 0.5375
+      },
+      "score_distribution": {
+        "0-20": 0,
+        "20-40": 1,
+        "40-60": 7,
+        "60-80": 6,
+        "80-100": 4
+      }
+    }
+  },
+  "worst_cases": [
+    {
+      "case_id": "sum_009",
+      "domain": "summarization",
+      "difficulty": "edge_case",
+      "composite_score": 0.3,
+      "judge_score": 0.0,
+      "rubric_score": 1.0,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%."
+    },
+    {
+      "case_id": "cod_006",
+      "domain": "coding",
+      "difficulty": "hard",
+      "composite_score": 0.325,
+      "judge_score": 0.25,
+      "rubric_score": 0.5,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%."
+    },
+    {
+      "case_id": "cod_002",
+      "domain": "coding",
+      "difficulty": "medium",
+      "composite_score": 0.4,
+      "judge_score": 0.25,
+      "rubric_score": 0.75,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%."
+    },
+    {
+      "case_id": "cod_004",
+      "domain": "coding",
+      "difficulty": "medium",
+      "composite_score": 0.41,
+      "judge_score": 0.5,
+      "rubric_score": 0.2,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 33%."
+    },
+    {
+      "case_id": "sum_016",
+      "domain": "summarization",
+      "difficulty": "edge_case",
+      "composite_score": 0.5,
+      "judge_score": 0.5,
+      "rubric_score": 0.5,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%."
+    }
+  ],
+  "best_cases": [
+    {
+      "case_id": "sup_014",
+      "domain": "support",
+      "difficulty": "hard",
+      "composite_score": 1.0,
+      "judge_score": 1.0,
+      "rubric_score": 1.0,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%."
+    },
+    {
+      "case_id": "sup_016",
+      "domain": "support",
+      "difficulty": "hard",
+      "composite_score": 1.0,
+      "judge_score": 1.0,
+      "rubric_score": 1.0,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%."
+    },
+    {
+      "case_id": "sup_017",
+      "domain": "support",
+      "difficulty": "medium",
+      "composite_score": 1.0,
+      "judge_score": 1.0,
+      "rubric_score": 1.0,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%."
+    },
+    {
+      "case_id": "sup_018",
+      "domain": "support",
+      "difficulty": "easy",
+      "composite_score": 1.0,
+      "judge_score": 1.0,
+      "rubric_score": 1.0,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%."
+    },
+    {
+      "case_id": "sup_019",
+      "domain": "support",
+      "difficulty": "easy",
+      "composite_score": 1.0,
+      "judge_score": 1.0,
+      "rubric_score": 1.0,
+      "judge_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%."
+    }
+  ]
+}

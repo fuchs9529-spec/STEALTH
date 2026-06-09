@@ -1,0 +1,426 @@
+[
+  {
+    "id": "cod_001",
+    "domain": "coding",
+    "scenario": "generation",
+    "difficulty": "easy",
+    "language": "python",
+    "prompt": "Write a Python function that takes a list of integers and returns the two numbers that sum to a given target. If no pair exists, return None. Include type hints and a docstring.",
+    "reference_solution": "from typing import Optional\n\ndef two_sum(nums: list[int], target: int) -> Optional[tuple[int, int]]:\n    \"\"\"Return first pair of numbers from nums that sum to target, or None.\"\"\"\n    seen = {}\n    for num in nums:\n        complement = target - num\n        if complement in seen:\n            return (complement, num)\n        seen[num] = True\n    return None",
+    "ideal_response_criteria": [
+      "Implements a working solution (O(n) hash map is preferred but O(n²) is acceptable)",
+      "Includes type hints",
+      "Includes a docstring",
+      "Returns None when no pair exists",
+      "Handles edge cases (empty list, no solution)"
+    ],
+    "rubric_checks": {
+      "contains_code": true,
+      "has_type_hints": true,
+      "has_docstring": true,
+      "handles_none_case": true,
+      "no_syntax_errors": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "clarity", "edge_case_handling"],
+    "tags": ["algorithms", "hash map", "function", "easy"]
+  },
+  {
+    "id": "cod_002",
+    "domain": "coding",
+    "scenario": "debugging",
+    "difficulty": "medium",
+    "language": "python",
+    "prompt": "This function is supposed to return the nth Fibonacci number but has a bug. Find and fix it:\n\n```python\ndef fibonacci(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return fibonacci(n - 1) + fibonacci(n - 3)\n```",
+    "reference_solution": "def fibonacci(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return fibonacci(n - 1) + fibonacci(n - 2)  # was n - 3",
+    "ideal_response_criteria": [
+      "Correctly identifies the bug (n-3 should be n-2)",
+      "Provides the corrected code",
+      "Explains why the bug causes incorrect results",
+      "Optionally mentions the stack overflow risk for large n"
+    ],
+    "rubric_checks": {
+      "identifies_correct_bug": true,
+      "provides_fix": true,
+      "explains_bug": true,
+      "no_syntax_errors": true
+    },
+    "quality_dimensions": ["correctness", "clarity", "code_quality"],
+    "tags": ["debugging", "recursion", "fibonacci"]
+  },
+  {
+    "id": "cod_003",
+    "domain": "coding",
+    "scenario": "explanation",
+    "difficulty": "easy",
+    "language": "python",
+    "prompt": "Explain what this Python code does, line by line:\n\n```python\ndef mystery(lst):\n    return [x for x in lst if x == x[::-1]]\n```",
+    "ideal_response_criteria": [
+      "Correctly identifies it as a palindrome filter",
+      "Explains list comprehension syntax",
+      "Explains the x[::-1] slice (reversal)",
+      "Provides an example of input and output",
+      "Is clear and accessible to a beginner"
+    ],
+    "rubric_checks": {
+      "identifies_as_palindrome_filter": true,
+      "explains_slice_notation": true,
+      "provides_example": true,
+      "beginner_accessible": true
+    },
+    "quality_dimensions": ["correctness", "clarity"],
+    "tags": ["explanation", "list comprehension", "palindrome"]
+  },
+  {
+    "id": "cod_004",
+    "domain": "coding",
+    "scenario": "generation",
+    "difficulty": "medium",
+    "language": "sql",
+    "prompt": "Write a SQL query to find the top 5 customers by total order value in 2025 from a table called `orders` with columns: customer_id, order_date, order_total. Include the customer_id and their total spend.",
+    "reference_solution": "SELECT customer_id, SUM(order_total) AS total_spend\nFROM orders\nWHERE YEAR(order_date) = 2025\nGROUP BY customer_id\nORDER BY total_spend DESC\nLIMIT 5;",
+    "ideal_response_criteria": [
+      "Uses GROUP BY on customer_id",
+      "Uses SUM(order_total)",
+      "Filters by year 2025",
+      "Orders by descending total",
+      "Limits to 5 results",
+      "Uses standard SQL (or notes dialect differences)"
+    ],
+    "rubric_checks": {
+      "uses_group_by": true,
+      "uses_sum": true,
+      "filters_by_year": true,
+      "uses_order_by_desc": true,
+      "uses_limit": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "clarity"],
+    "tags": ["SQL", "aggregation", "ranking"]
+  },
+  {
+    "id": "cod_005",
+    "domain": "coding",
+    "scenario": "generation",
+    "difficulty": "medium",
+    "language": "javascript",
+    "prompt": "Write a React hook `useDebounce(value, delay)` that returns a debounced version of the value. Include TypeScript types.",
+    "reference_solution": "import { useState, useEffect } from 'react';\n\nfunction useDebounce<T>(value: T, delay: number): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const timer = setTimeout(() => setDebouncedValue(value), delay);\n    return () => clearTimeout(timer);\n  }, [value, delay]);\n\n  return debouncedValue;\n}",
+    "ideal_response_criteria": [
+      "Returns a debounced value (not just delayed side effects)",
+      "Uses useEffect with setTimeout",
+      "Clears the timeout on cleanup (to avoid memory leaks)",
+      "Includes TypeScript generics",
+      "Dependency array includes value and delay"
+    ],
+    "rubric_checks": {
+      "uses_useEffect": true,
+      "uses_setTimeout": true,
+      "has_cleanup_clearTimeout": true,
+      "has_typescript_types": true,
+      "correct_dep_array": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "edge_case_handling"],
+    "tags": ["React", "hooks", "TypeScript", "debounce"]
+  },
+  {
+    "id": "cod_006",
+    "domain": "coding",
+    "scenario": "security_review",
+    "difficulty": "hard",
+    "language": "python",
+    "prompt": "Review this Python code for security vulnerabilities:\n\n```python\nimport sqlite3\n\ndef get_user(username):\n    conn = sqlite3.connect('users.db')\n    cursor = conn.cursor()\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    cursor.execute(query)\n    return cursor.fetchone()\n```",
+    "ideal_response_criteria": [
+      "Identifies the SQL injection vulnerability clearly",
+      "Explains what an attacker could do (e.g., ' OR '1'='1)",
+      "Provides the fixed version using parameterized queries",
+      "Does NOT write an exploit payload without a strong pedagogical reason",
+      "Mentions connection management (no conn.close())"
+    ],
+    "rubric_checks": {
+      "identifies_sql_injection": true,
+      "explains_vulnerability": true,
+      "provides_parameterized_fix": true,
+      "no_gratuitous_exploit_code": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "clarity", "edge_case_handling"],
+    "tags": ["security", "SQL injection", "code review", "edge_case"]
+  },
+  {
+    "id": "cod_007",
+    "domain": "coding",
+    "scenario": "optimization",
+    "difficulty": "medium",
+    "language": "python",
+    "prompt": "This code works but is very slow for large inputs. Optimize it:\n\n```python\ndef has_duplicates(lst):\n    for i in range(len(lst)):\n        for j in range(len(lst)):\n            if i != j and lst[i] == lst[j]:\n                return True\n    return False\n```",
+    "ideal_response_criteria": [
+      "Identifies the O(n²) complexity",
+      "Provides an O(n) solution using a set",
+      "Explains the optimization",
+      "Handles edge cases (empty list)"
+    ],
+    "rubric_checks": {
+      "identifies_complexity_issue": true,
+      "provides_faster_solution": true,
+      "uses_set_or_equivalent": true,
+      "explains_improvement": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "clarity"],
+    "tags": ["optimization", "complexity", "sets"]
+  },
+  {
+    "id": "cod_008",
+    "domain": "coding",
+    "scenario": "unit_tests",
+    "difficulty": "medium",
+    "language": "python",
+    "prompt": "Write pytest unit tests for this function, covering normal cases, edge cases, and error cases:\n\n```python\ndef divide(a: float, b: float) -> float:\n    \"\"\"Divide a by b. Raises ValueError if b is zero.\"\"\"\n    if b == 0:\n        raise ValueError('Cannot divide by zero')\n    return a / b\n```",
+    "ideal_response_criteria": [
+      "Tests the normal case (positive numbers)",
+      "Tests negative numbers",
+      "Tests zero numerator",
+      "Tests division by zero (expects ValueError)",
+      "Tests floating point inputs",
+      "Uses pytest conventions (def test_...)"
+    ],
+    "rubric_checks": {
+      "tests_normal_case": true,
+      "tests_zero_division": true,
+      "uses_pytest_raises": true,
+      "at_least_four_test_cases": true,
+      "no_syntax_errors": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "edge_case_handling"],
+    "tags": ["testing", "pytest", "edge cases"]
+  },
+  {
+    "id": "cod_009",
+    "domain": "coding",
+    "scenario": "generation",
+    "difficulty": "easy",
+    "language": "python",
+    "prompt": "Write a Python regex pattern to validate an email address. It should accept standard formats like user@example.com and reject invalid ones. Show how to use it.",
+    "ideal_response_criteria": [
+      "Provides a working regex pattern",
+      "Handles common valid formats (user@domain.tld)",
+      "Shows usage with re.match or re.fullmatch",
+      "Demonstrates with valid and invalid examples",
+      "Notes any known limitations of regex email validation"
+    ],
+    "rubric_checks": {
+      "provides_regex_pattern": true,
+      "shows_usage_example": true,
+      "demonstrates_valid_and_invalid": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "clarity"],
+    "tags": ["regex", "validation", "email"]
+  },
+  {
+    "id": "cod_010",
+    "domain": "coding",
+    "scenario": "generation",
+    "difficulty": "medium",
+    "language": "python",
+    "prompt": "Implement a binary search function that works on a sorted list. It should return the index of the target element, or -1 if not found. Include edge case handling.",
+    "reference_solution": "def binary_search(arr: list, target) -> int:\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = left + (right - left) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "ideal_response_criteria": [
+      "Correct binary search logic",
+      "Uses mid = left + (right - left) // 2 to avoid integer overflow (or explains why)",
+      "Returns -1 when not found",
+      "Handles empty list",
+      "O(log n) time complexity"
+    ],
+    "rubric_checks": {
+      "correct_logic": true,
+      "returns_neg_one_on_miss": true,
+      "handles_empty_list": true,
+      "no_syntax_errors": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "edge_case_handling"],
+    "tags": ["algorithms", "binary search", "classic"]
+  },
+  {
+    "id": "cod_011",
+    "domain": "coding",
+    "scenario": "debugging",
+    "difficulty": "medium",
+    "language": "python",
+    "prompt": "This code is supposed to print numbers 1 through 10, but something's wrong:\n\n```python\nfor i in range(10):\n    print(i)\n```",
+    "ideal_response_criteria": [
+      "Correctly identifies the off-by-one error (range(10) gives 0-9)",
+      "Explains that range(10) starts at 0 and excludes 10",
+      "Provides the fix: range(1, 11)",
+      "Explains how Python's range works"
+    ],
+    "rubric_checks": {
+      "identifies_off_by_one": true,
+      "provides_correct_fix": true,
+      "explains_range_behavior": true
+    },
+    "quality_dimensions": ["correctness", "clarity"],
+    "tags": ["debugging", "off-by-one", "beginner", "range"]
+  },
+  {
+    "id": "cod_012",
+    "domain": "coding",
+    "scenario": "refactoring",
+    "difficulty": "medium",
+    "language": "python",
+    "prompt": "Refactor this code to remove the nested conditionals and improve readability:\n\n```python\ndef process_order(order):\n    if order is not None:\n        if order.get('status') == 'active':\n            if order.get('total') > 0:\n                if order.get('customer_id'):\n                    return process(order)\n                else:\n                    return 'missing customer'\n            else:\n                return 'invalid total'\n        else:\n            return 'inactive order'\n    else:\n        return 'no order'\n```",
+    "ideal_response_criteria": [
+      "Uses early returns / guard clauses to flatten the nesting",
+      "Preserves the same logic and return values exactly",
+      "Results in more readable code",
+      "Does not introduce bugs by changing the logic"
+    ],
+    "rubric_checks": {
+      "uses_guard_clauses": true,
+      "preserves_logic": true,
+      "no_syntax_errors": true,
+      "more_readable": true
+    },
+    "quality_dimensions": ["code_quality", "clarity", "correctness"],
+    "tags": ["refactoring", "guard clauses", "readability"]
+  },
+  {
+    "id": "cod_013",
+    "domain": "coding",
+    "scenario": "generation",
+    "difficulty": "hard",
+    "language": "python",
+    "prompt": "Write a Python context manager class `Timer` that measures execution time of a block of code and prints the elapsed time in milliseconds when the block exits.",
+    "reference_solution": "import time\n\nclass Timer:\n    def __enter__(self):\n        self.start = time.perf_counter()\n        return self\n    \n    def __exit__(self, *args):\n        elapsed = (time.perf_counter() - self.start) * 1000\n        print(f'Elapsed: {elapsed:.2f}ms')\n\n# Usage:\n# with Timer():\n#     time.sleep(0.1)",
+    "ideal_response_criteria": [
+      "Implements __enter__ and __exit__ correctly",
+      "Uses time.perf_counter() or equivalent high-resolution timer",
+      "Prints elapsed time in milliseconds",
+      "Shows usage example",
+      "Handles exceptions in __exit__ gracefully (returns None/False)"
+    ],
+    "rubric_checks": {
+      "implements_enter_exit": true,
+      "uses_high_res_timer": true,
+      "prints_milliseconds": true,
+      "shows_usage": true,
+      "no_syntax_errors": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "clarity"],
+    "tags": ["context manager", "timing", "OOP"]
+  },
+  {
+    "id": "cod_014",
+    "domain": "coding",
+    "scenario": "generation",
+    "difficulty": "hard",
+    "language": "bash",
+    "prompt": "Write a Bash script that monitors a log file and sends an alert (echo to stdout) if the word 'ERROR' appears more than 5 times in the last 60 seconds. The log file path should be configurable.",
+    "ideal_response_criteria": [
+      "Accepts a configurable log file path",
+      "Monitors the file in a loop or uses tail -f",
+      "Counts ERROR occurrences in the last 60 seconds",
+      "Echoes an alert when threshold exceeded",
+      "Is syntactically valid Bash",
+      "Handles missing file gracefully"
+    ],
+    "rubric_checks": {
+      "configurable_path": true,
+      "counts_errors": true,
+      "has_threshold_check": true,
+      "syntactically_valid": true,
+      "handles_missing_file": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "edge_case_handling"],
+    "tags": ["bash", "monitoring", "scripting"]
+  },
+  {
+    "id": "cod_015",
+    "domain": "coding",
+    "scenario": "generation",
+    "difficulty": "hard",
+    "language": "python",
+    "prompt": "Write a Python function using pandas that cleans a DataFrame with these issues: (1) duplicate rows, (2) missing values in 'age' column (fill with median), (3) 'phone' column has mixed formats like '(555) 123-4567', '555-123-4567', '5551234567' — normalize all to '5551234567'. Return the cleaned DataFrame.",
+    "ideal_response_criteria": [
+      "Removes duplicate rows using drop_duplicates()",
+      "Fills missing 'age' with median",
+      "Normalizes phone numbers by stripping non-digits",
+      "Returns the cleaned DataFrame",
+      "Does not mutate the input (uses copy or inplace=False)"
+    ],
+    "rubric_checks": {
+      "handles_duplicates": true,
+      "fills_age_with_median": true,
+      "normalizes_phone": true,
+      "returns_dataframe": true,
+      "no_syntax_errors": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "edge_case_handling"],
+    "tags": ["pandas", "data cleaning", "ETL"]
+  },
+  {
+    "id": "cod_016",
+    "domain": "coding",
+    "scenario": "security_edge",
+    "difficulty": "hard",
+    "language": "python",
+    "prompt": "Write a function to hash a password for storage. The user wants to use MD5 for speed.",
+    "ideal_response_criteria": [
+      "Explicitly warns that MD5 is NOT safe for password hashing",
+      "Explains why (fast = brute-forceable, rainbow tables)",
+      "Provides a correct implementation using bcrypt, argon2, or hashlib.pbkdf2_hmac",
+      "Does NOT implement MD5 password hashing as requested",
+      "Is clear and non-judgmental in the explanation"
+    ],
+    "rubric_checks": {
+      "warns_against_md5": true,
+      "explains_why_md5_unsafe": true,
+      "provides_safe_alternative": true,
+      "does_not_implement_md5_for_passwords": true
+    },
+    "quality_dimensions": ["correctness", "code_quality", "clarity", "edge_case_handling"],
+    "tags": ["security", "hashing", "password", "edge_case"]
+  },
+  {
+    "id": "cod_017",
+    "domain": "coding",
+    "scenario": "debugging",
+    "difficulty": "hard",
+    "language": "python",
+    "prompt": "This async function has a bug causing it to not await properly. Identify and fix the issue:\n\n```python\nimport asyncio\n\nasync def fetch_data(url):\n    await asyncio.sleep(1)  # simulates network call\n    return f'data from {url}'\n\nasync def main():\n    results = []\n    for url in ['http://a.com', 'http://b.com', 'http://c.com']:\n        result = fetch_data(url)  # bug here\n        results.append(result)\n    print(results)\n\nasyncio.run(main())\n```",
+    "ideal_response_criteria": [
+      "Identifies the missing await on fetch_data(url)",
+      "Notes that coroutine objects (not results) are being appended",
+      "Provides the fix with await",
+      "Optionally suggests asyncio.gather for concurrent execution",
+      "Explains the difference between a coroutine object and its result"
+    ],
+    "rubric_checks": {
+      "identifies_missing_await": true,
+      "explains_coroutine_vs_result": true,
+      "provides_fix": true,
+      "optionally_mentions_gather": true
+    },
+    "quality_dimensions": ["correctness", "clarity", "code_quality"],
+    "tags": ["async", "asyncio", "debugging", "coroutines"]
+  },
+  {
+    "id": "cod_018",
+    "domain": "coding",
+    "scenario": "explanation",
+    "difficulty": "medium",
+    "language": "python",
+    "prompt": "Explain the difference between `deepcopy` and `copy` in Python, with examples showing when each is needed.",
+    "ideal_response_criteria": [
+      "Correctly distinguishes shallow copy (copies references) vs deep copy (copies all nested objects)",
+      "Provides a concrete example where shallow copy fails",
+      "Shows deepcopy solving that problem",
+      "Mentions the import (import copy)",
+      "Is accessible to an intermediate Python developer"
+    ],
+    "rubric_checks": {
+      "correctly_distinguishes_both": true,
+      "provides_failing_example": true,
+      "shows_deepcopy_fix": true,
+      "mentions_import": true
+    },
+    "quality_dimensions": ["correctness", "clarity"],
+    "tags": ["explanation", "copy semantics", "intermediate"]
+  }
+]

@@ -1,0 +1,2354 @@
+[
+  {
+    "case_id": "sup_001",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.897,
+    "rubric_details": {
+      "contains_apology": true,
+      "mentions_order_lookup": true,
+      "max_length_words": true,
+      "avoids_blame_language": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.897,
+    "composite_score": 0.794,
+    "latency_ms": 358.4,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_002",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.854,
+    "rubric_details": {
+      "contains_steps": true,
+      "mentions_expiry": true,
+      "max_length_words": true
+    },
+    "judge_score": 0.833,
+    "rubric_score": 0.854,
+    "composite_score": 0.84,
+    "latency_ms": 2072.8,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_003",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.917,
+    "rubric_details": {
+      "contains_apology": true,
+      "mentions_refund_or_investigation": true,
+      "avoids_accusatory_language": true,
+      "max_length_words": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.917,
+    "composite_score": 0.8,
+    "latency_ms": 2440.9,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_004",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's urgent situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.54,
+    "rubric_details": {
+      "expresses_safety_urgency": false,
+      "mentions_escalation": true,
+      "offers_refund": true,
+      "avoids_defensive_language": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.54,
+    "composite_score": 0.687,
+    "latency_ms": 475.5,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_005",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's urgent situation adequately but with some gaps. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.678,
+    "rubric_details": {
+      "tone_remains_professional": true,
+      "does_not_capitulate_entirely": true,
+      "asks_for_details": false,
+      "max_length_words": true
+    },
+    "judge_score": 0.688,
+    "rubric_score": 0.678,
+    "composite_score": 0.685,
+    "latency_ms": 1640.1,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_006",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's urgent situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.734,
+    "rubric_details": {
+      "addresses_all_three_issues": true,
+      "structured_response": true,
+      "max_length_words": false
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.734,
+    "composite_score": 0.745,
+    "latency_ms": 2007.2,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_007",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.836,
+    "rubric_details": {
+      "admits_limitation": true,
+      "offers_alternative": true,
+      "does_not_fabricate": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.836,
+    "composite_score": 0.776,
+    "latency_ms": 1170.4,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_008",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.85,
+    "rubric_details": {
+      "mentions_escalation": true,
+      "provides_timeline": true,
+      "validates_frustration": true
+    },
+    "judge_score": 0.833,
+    "rubric_score": 0.85,
+    "composite_score": 0.838,
+    "latency_ms": 2275.2,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_009",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.803,
+    "rubric_details": {
+      "mentions_known_outage": true,
+      "reassures_card_is_fine": true,
+      "provides_eta": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.803,
+    "composite_score": 0.766,
+    "latency_ms": 1228.8,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_010",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "confirms_eligibility": true,
+      "mentions_free_shipping": true,
+      "mentions_refund_timeline": true,
+      "max_length_words": true
+    },
+    "judge_score": 0.917,
+    "rubric_score": 1.0,
+    "composite_score": 0.942,
+    "latency_ms": 887.0,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_011",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.947,
+    "rubric_details": {
+      "mentions_privacy_portal": true,
+      "mentions_timeline": true,
+      "mentions_legal_retention": true,
+      "respects_right": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.947,
+    "composite_score": 0.809,
+    "latency_ms": 2215.1,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_012",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.761,
+    "rubric_details": {
+      "no_competitor_disparagement": true,
+      "positive_tone": true,
+      "no_false_claims": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.761,
+    "composite_score": 0.753,
+    "latency_ms": 1466.8,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_013",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.979,
+    "rubric_details": {
+      "provides_cancel_steps": true,
+      "no_pressure_tactics": true,
+      "mentions_no_penalty": true
+    },
+    "judge_score": 0.917,
+    "rubric_score": 0.979,
+    "composite_score": 0.935,
+    "latency_ms": 2383.3,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_014",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's urgent situation adequately but with some gaps. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.624,
+    "rubric_details": {
+      "acknowledges_grief_first": true,
+      "avoids_boilerplate": true,
+      "commits_to_resolution": true,
+      "sensitive_tone": false
+    },
+    "judge_score": 0.625,
+    "rubric_score": 0.624,
+    "composite_score": 0.625,
+    "latency_ms": 1230.9,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_015",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.737,
+    "rubric_details": {
+      "asks_for_clarification": true,
+      "does_not_assume": false,
+      "friendly_tone": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.737,
+    "composite_score": 0.746,
+    "latency_ms": 1263.8,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_016",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses actionability."
+      },
+      {
+        "dimension": "safety",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses safety."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's urgent situation adequately but with some gaps. Tone is professional but could be warmer.",
+    "rubric_pass_rate": 0.626,
+    "rubric_details": {
+      "treats_as_priority": true,
+      "mentions_investigation": true,
+      "mentions_fraud_team": false,
+      "does_not_confirm_guilt_without_investigation": false
+    },
+    "judge_score": 0.6,
+    "rubric_score": 0.626,
+    "composite_score": 0.608,
+    "latency_ms": 455.9,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_017",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.832,
+    "rubric_details": {
+      "provides_specific_steps": false,
+      "ordered_by_ease": true,
+      "mentions_escalation_path": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.832,
+    "composite_score": 0.774,
+    "latency_ms": 2026.2,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_018",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.79,
+    "rubric_details": {
+      "respects_request": true,
+      "provides_human_hours": true,
+      "offers_callback": false,
+      "no_aggressive_redirect": true
+    },
+    "judge_score": 0.833,
+    "rubric_score": 0.79,
+    "composite_score": 0.82,
+    "latency_ms": 1185.8,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_019",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.791,
+    "rubric_details": {
+      "apologizes_for_error": true,
+      "mentions_resolution_options": true,
+      "max_length_words": false
+    },
+    "judge_score": 0.875,
+    "rubric_score": 0.791,
+    "composite_score": 0.85,
+    "latency_ms": 1274.9,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sup_020",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "Thank you for reaching out. I understand your frustration and sincerely apologize for the inconvenience. I've looked into your account and I'm taking immediate steps to resolve this. Please allow 24-48 hours for the update to be reflected, and don't hesitate to contact us again if you need further assistance.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses accuracy."
+      },
+      {
+        "dimension": "empathy",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses empathy."
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses completeness."
+      },
+      {
+        "dimension": "actionability",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses actionability."
+      }
+    ],
+    "judge_overall_comment": "The response handles the customer's urgent situation well. Tone is appropriate and empathetic.",
+    "rubric_pass_rate": 0.729,
+    "rubric_details": {
+      "acknowledges_circumstances": false,
+      "honest_about_window": false,
+      "mentions_escalation_path": true,
+      "no_flat_refusal": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.729,
+    "composite_score": 0.744,
+    "latency_ms": 770.2,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_001",
+    "domain": "summarization",
+    "difficulty": "easy",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.887,
+    "rubric_details": {
+      "max_sentences": true,
+      "must_mention_fed": true,
+      "must_mention_rate_hold": false,
+      "no_fabricated_facts": false
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.887,
+    "composite_score": 0.791,
+    "latency_ms": 1522.7,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_002",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary faithfully captures the source material. All key points are included.",
+    "rubric_pass_rate": 0.722,
+    "rubric_details": {
+      "lists_action_items": true,
+      "includes_owners": true,
+      "includes_deadlines": true,
+      "mentions_okr_rescheduled": true,
+      "no_fabricated_items": false
+    },
+    "judge_score": 0.812,
+    "rubric_score": 0.722,
+    "composite_score": 0.785,
+    "latency_ms": 646.4,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_003",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.623,
+    "rubric_details": {
+      "explains_damage_exclusions": true,
+      "explains_liability_cap": false,
+      "plain_language": true,
+      "no_misrepresentation": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.623,
+    "composite_score": 0.712,
+    "latency_ms": 1662.6,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_004",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.686,
+    "rubric_details": {
+      "max_sentences": true,
+      "mentions_key_benefit": true,
+      "accurate_statistics": true,
+      "no_jargon_without_explanation": true
+    },
+    "judge_score": 0.562,
+    "rubric_score": 0.686,
+    "composite_score": 0.6,
+    "latency_ms": 995.6,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_005",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary faithfully captures the source material. All key points are included.",
+    "rubric_pass_rate": 0.841,
+    "rubric_details": {
+      "mentions_downtime": true,
+      "mentions_root_cause": true,
+      "mentions_resolution": false,
+      "single_paragraph": true
+    },
+    "judge_score": 0.812,
+    "rubric_score": 0.841,
+    "composite_score": 0.821,
+    "latency_ms": 2234.4,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_006",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.63,
+    "rubric_details": {
+      "exactly_one_sentence": true,
+      "mentions_price_or_key_feature": true,
+      "grammatically_correct": false
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.63,
+    "composite_score": 0.714,
+    "latency_ms": 958.6,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_007",
+    "domain": "summarization",
+    "difficulty": "easy",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.979,
+    "rubric_details": {
+      "exactly_five_bullets": true,
+      "all_five_risk_types_present": true,
+      "no_fabricated_risks": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.979,
+    "composite_score": 0.819,
+    "latency_ms": 747.9,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_008",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.67,
+    "rubric_details": {
+      "mentions_positive_result": true,
+      "mentions_small_sample": true,
+      "mentions_not_statistically_significant": true,
+      "represents_both_views": false
+    },
+    "judge_score": 0.688,
+    "rubric_score": 0.67,
+    "composite_score": 0.682,
+    "latency_ms": 1701.6,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_009",
+    "domain": "summarization",
+    "difficulty": "edge_case",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.44,
+    "rubric_details": {
+      "does_not_hallucinate": true,
+      "acknowledges_minimal_content": true,
+      "max_length_words": false
+    },
+    "judge_score": 0.625,
+    "rubric_score": 0.44,
+    "composite_score": 0.569,
+    "latency_ms": 2288.6,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_010",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.698,
+    "rubric_details": {
+      "plain_language": false,
+      "mentions_revenue_beat": false,
+      "mentions_raised_guidance": false,
+      "accurate_figures": false
+    },
+    "judge_score": 0.562,
+    "rubric_score": 0.698,
+    "composite_score": 0.603,
+    "latency_ms": 762.2,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_011",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.557,
+    "rubric_details": {
+      "objective_tone": true,
+      "no_premature_judgment": false,
+      "mentions_mixed_witness_accounts": false,
+      "notes_current_status": false
+    },
+    "judge_score": 0.688,
+    "rubric_score": 0.557,
+    "composite_score": 0.648,
+    "latency_ms": 2083.7,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_012",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.941,
+    "rubric_details": {
+      "four_to_five_bullets": true,
+      "accurate_key_statistics": true,
+      "no_fabricated_data": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.941,
+    "composite_score": 0.807,
+    "latency_ms": 2032.2,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_013",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.846,
+    "rubric_details": {
+      "captures_mixed_sentiment": true,
+      "mentions_durability_issue": true,
+      "mentions_batch_distinction": true,
+      "balanced_representation": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.846,
+    "composite_score": 0.779,
+    "latency_ms": 724.9,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_014",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.797,
+    "rubric_details": {
+      "captures_core_message": true,
+      "significantly_shorter": true,
+      "mentions_reopening_date": false
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.797,
+    "composite_score": 0.764,
+    "latency_ms": 1479.7,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_015",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.635,
+    "rubric_details": {
+      "plain_language": true,
+      "covers_side_effects": true,
+      "covers_serious_warning": false,
+      "accurate_representation": true,
+      "no_omission_of_key_warnings": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.635,
+    "composite_score": 0.716,
+    "latency_ms": 1425.1,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_016",
+    "domain": "summarization",
+    "difficulty": "edge_case",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.646,
+    "rubric_details": {
+      "handles_constraint_gracefully": true,
+      "does_not_ignore_constraint": false
+    },
+    "judge_score": 0.5,
+    "rubric_score": 0.646,
+    "composite_score": 0.544,
+    "latency_ms": 1484.6,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "sum_017",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "The text describes a key development with several important implications. The main finding is clearly stated along with supporting evidence. Notable limitations include the scope constraints mentioned in the source material.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses faithfulness."
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coverage."
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses conciseness."
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses coherence."
+      }
+    ],
+    "judge_overall_comment": "The summary partially captures the source material. Some important details are missing.",
+    "rubric_pass_rate": 0.7,
+    "rubric_details": {
+      "represents_both_views": true,
+      "notes_valuation_disagreement": true,
+      "no_false_consensus": false,
+      "max_sentences": true
+    },
+    "judge_score": 0.625,
+    "rubric_score": 0.7,
+    "composite_score": 0.648,
+    "latency_ms": 960.7,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_001",
+    "domain": "coding",
+    "difficulty": "easy",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "clarity",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses clarity."
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses edge case handling."
+      }
+    ],
+    "judge_overall_comment": "The code is correct and well-structured. Edge cases are handled.",
+    "rubric_pass_rate": 0.99,
+    "rubric_details": {
+      "contains_code": true,
+      "has_type_hints": true,
+      "has_docstring": true,
+      "handles_none_case": true,
+      "no_syntax_errors": true
+    },
+    "judge_score": 0.938,
+    "rubric_score": 0.99,
+    "composite_score": 0.953,
+    "latency_ms": 1505.5,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_002",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.78,
+    "rubric_details": {
+      "identifies_correct_bug": true,
+      "provides_fix": true,
+      "explains_bug": true,
+      "no_syntax_errors": false
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.78,
+    "composite_score": 0.759,
+    "latency_ms": 2051.3,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_003",
+    "domain": "coding",
+    "difficulty": "easy",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.817,
+    "rubric_details": {
+      "identifies_as_palindrome_filter": true,
+      "explains_slice_notation": true,
+      "provides_example": true,
+      "beginner_accessible": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.817,
+    "composite_score": 0.77,
+    "latency_ms": 794.2,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_004",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.921,
+    "rubric_details": {
+      "uses_group_by": true,
+      "uses_sum": true,
+      "filters_by_year": true,
+      "uses_order_by_desc": true,
+      "uses_limit": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.921,
+    "composite_score": 0.801,
+    "latency_ms": 1832.0,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_005",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses edge case handling."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.831,
+    "rubric_details": {
+      "uses_useEffect": true,
+      "uses_setTimeout": true,
+      "has_cleanup_clearTimeout": true,
+      "has_typescript_types": false,
+      "correct_dep_array": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.831,
+    "composite_score": 0.774,
+    "latency_ms": 410.5,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_006",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses clarity."
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses edge case handling."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.522,
+    "rubric_details": {
+      "identifies_sql_injection": false,
+      "explains_vulnerability": false,
+      "provides_parameterized_fix": false,
+      "no_gratuitous_exploit_code": false
+    },
+    "judge_score": 0.562,
+    "rubric_score": 0.522,
+    "composite_score": 0.55,
+    "latency_ms": 1882.4,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_007",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses clarity."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.779,
+    "rubric_details": {
+      "identifies_complexity_issue": true,
+      "provides_faster_solution": true,
+      "uses_set_or_equivalent": true,
+      "explains_improvement": true
+    },
+    "judge_score": 0.583,
+    "rubric_score": 0.779,
+    "composite_score": 0.642,
+    "latency_ms": 1702.9,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_008",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses edge case handling."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.888,
+    "rubric_details": {
+      "tests_normal_case": true,
+      "tests_zero_division": true,
+      "uses_pytest_raises": true,
+      "at_least_four_test_cases": true,
+      "no_syntax_errors": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.888,
+    "composite_score": 0.791,
+    "latency_ms": 1826.7,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_009",
+    "domain": "coding",
+    "difficulty": "easy",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 1.0,
+        "raw_score": 5,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      }
+    ],
+    "judge_overall_comment": "The code is correct and well-structured. Edge cases are handled.",
+    "rubric_pass_rate": 0.985,
+    "rubric_details": {
+      "provides_regex_pattern": true,
+      "shows_usage_example": true,
+      "demonstrates_valid_and_invalid": true
+    },
+    "judge_score": 0.917,
+    "rubric_score": 0.985,
+    "composite_score": 0.937,
+    "latency_ms": 2290.6,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_010",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses edge case handling."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.824,
+    "rubric_details": {
+      "correct_logic": true,
+      "returns_neg_one_on_miss": true,
+      "handles_empty_list": true,
+      "no_syntax_errors": false
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.824,
+    "composite_score": 0.772,
+    "latency_ms": 1221.8,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_011",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.785,
+    "rubric_details": {
+      "identifies_off_by_one": true,
+      "provides_correct_fix": true,
+      "explains_range_behavior": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.785,
+    "composite_score": 0.761,
+    "latency_ms": 1039.5,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_012",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      },
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.907,
+    "rubric_details": {
+      "uses_guard_clauses": true,
+      "preserves_logic": true,
+      "no_syntax_errors": true,
+      "more_readable": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.907,
+    "composite_score": 0.797,
+    "latency_ms": 1541.7,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_013",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.714,
+    "rubric_details": {
+      "implements_enter_exit": true,
+      "uses_high_res_timer": true,
+      "prints_milliseconds": true,
+      "shows_usage": true,
+      "no_syntax_errors": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.714,
+    "composite_score": 0.739,
+    "latency_ms": 2130.2,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_014",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses edge case handling."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.652,
+    "rubric_details": {
+      "configurable_path": false,
+      "counts_errors": true,
+      "has_threshold_check": true,
+      "syntactically_valid": false,
+      "handles_missing_file": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.652,
+    "composite_score": 0.721,
+    "latency_ms": 1959.3,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_015",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses edge case handling."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.724,
+    "rubric_details": {
+      "handles_duplicates": true,
+      "fills_age_with_median": true,
+      "normalizes_phone": true,
+      "returns_dataframe": true,
+      "no_syntax_errors": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.724,
+    "composite_score": 0.742,
+    "latency_ms": 1635.9,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_016",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.5,
+        "raw_score": 3,
+        "rationale": "The response adequately addresses edge case handling."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.654,
+    "rubric_details": {
+      "warns_against_md5": true,
+      "explains_why_md5_unsafe": true,
+      "provides_safe_alternative": false,
+      "does_not_implement_md5_for_passwords": true
+    },
+    "judge_score": 0.688,
+    "rubric_score": 0.654,
+    "composite_score": 0.678,
+    "latency_ms": 1873.0,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_017",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses code quality."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.613,
+    "rubric_details": {
+      "identifies_missing_await": false,
+      "explains_coroutine_vs_result": false,
+      "provides_fix": true,
+      "optionally_mentions_gather": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.613,
+    "composite_score": 0.709,
+    "latency_ms": 2464.5,
+    "error": "",
+    "skipped": false
+  },
+  {
+    "case_id": "cod_018",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution that addresses the requirements:\n\n```python\ndef solution(input_data):\n    # Handle edge cases\n    if not input_data:\n        return None\n    # Core logic\n    result = process(input_data)\n    return result\n```\n\nThis approach uses O(n) time and O(1) space. Key considerations: handles empty input, avoids common pitfalls.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses correctness."
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "raw_score": 4,
+        "rationale": "The response adequately addresses clarity."
+      }
+    ],
+    "judge_overall_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed.",
+    "rubric_pass_rate": 0.863,
+    "rubric_details": {
+      "correctly_distinguishes_both": true,
+      "provides_failing_example": true,
+      "shows_deepcopy_fix": true,
+      "mentions_import": true
+    },
+    "judge_score": 0.75,
+    "rubric_score": 0.863,
+    "composite_score": 0.784,
+    "latency_ms": 532.2,
+    "error": "",
+    "skipped": false
+  }
+]

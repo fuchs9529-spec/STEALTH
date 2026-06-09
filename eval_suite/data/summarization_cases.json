@@ -1,0 +1,377 @@
+[
+  {
+    "id": "sum_001",
+    "domain": "summarization",
+    "scenario": "news_article",
+    "difficulty": "easy",
+    "instruction": "Summarize the following news article in 2-3 sentences.",
+    "source_text": "WASHINGTON — The Federal Reserve announced on Wednesday that it would hold interest rates steady for the third consecutive meeting, citing ongoing uncertainty about inflation trends. Chair Jerome Powell noted at a press conference that while inflation has declined significantly from its 2022 peak of 9.1%, it remains above the Fed's 2% target. 'We are committed to returning inflation to our target, but we want to see more evidence before cutting rates,' Powell said. Markets had widely expected the pause. The S&P 500 rose 0.8% following the announcement, with bond yields falling slightly. Analysts were divided on whether cuts would come in the first or second quarter of next year.",
+    "ideal_response_criteria": [
+      "Captures the core decision (rates held steady, third consecutive meeting)",
+      "Mentions the inflation context",
+      "Includes market reaction or Powell's rationale",
+      "Is factually accurate — no fabricated details",
+      "Stays within 2-3 sentences as instructed"
+    ],
+    "rubric_checks": {
+      "max_sentences": 3,
+      "must_mention_fed": true,
+      "must_mention_rate_hold": true,
+      "no_fabricated_facts": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["news", "finance", "brief"]
+  },
+  {
+    "id": "sum_002",
+    "domain": "summarization",
+    "scenario": "meeting_transcript",
+    "difficulty": "medium",
+    "instruction": "Extract the key decisions and action items from this meeting transcript.",
+    "source_text": "Meeting: Q3 Product Planning — June 5, 2026\nAttendees: Sarah (PM), Dev (Eng), Priya (Design), Tom (Marketing)\n\nSarah: Okay let's get started. First item — the mobile push notification feature. Dev, where are we?\nDev: We're about 80% done. Should be ready for QA by June 20th.\nSarah: Great. Priya, can you have the final notification icons to Dev by June 15th?\nPriya: Yes, I can do that.\nSarah: Perfect. Tom, on the marketing side — do we have the launch copy ready?\nTom: Not yet. I need the feature spec by June 12th to write the copy.\nSarah: Dev, can you send Tom the spec by June 12th?\nDev: Sure.\nSarah: Alright. Second item — the pricing page redesign. Priya, you said it's blocked?\nPriya: Yes, I'm waiting on the new pricing data from Finance. Sarah, can you chase that?\nSarah: I'll reach out to Finance today. Third item — the Q3 OKR review. We're moving that meeting to July 2nd. Everyone confirmed?\n[General agreement]\nSarah: Great, that's all for today.",
+    "ideal_response_criteria": [
+      "Lists all action items with owner and deadline",
+      "Identifies the decisions made (OKR meeting rescheduled to July 2)",
+      "Does not add information not in the transcript",
+      "Is well-organized (ideally by action item or person)"
+    ],
+    "rubric_checks": {
+      "lists_action_items": true,
+      "includes_owners": true,
+      "includes_deadlines": true,
+      "mentions_okr_rescheduled": true,
+      "no_fabricated_items": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["meeting", "action items", "business"]
+  },
+  {
+    "id": "sum_003",
+    "domain": "summarization",
+    "scenario": "legal_document",
+    "difficulty": "hard",
+    "instruction": "Summarize the key terms of this contract clause in plain English for a non-lawyer.",
+    "source_text": "Section 14.2 Limitation of Liability. IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION, OR LOSS OF GOODWILL, ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, REGARDLESS OF WHETHER SUCH DAMAGES WERE FORESEEABLE AND WHETHER EITHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THE TOTAL CUMULATIVE LIABILITY OF EITHER PARTY FOR DIRECT DAMAGES UNDER THIS AGREEMENT SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNTS PAID OR PAYABLE BY CUSTOMER TO VENDOR IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) TEN THOUSAND U.S. DOLLARS ($10,000).",
+    "ideal_response_criteria": [
+      "Explains that indirect/consequential damages are excluded for both parties",
+      "Explains the liability cap (12-month fees or $10,000, whichever is greater)",
+      "Uses plain, accessible language — no legalese",
+      "Does not misrepresent the clause (e.g., does not say only one party is protected)",
+      "Recommends consulting a lawyer for important decisions"
+    ],
+    "rubric_checks": {
+      "explains_damage_exclusions": true,
+      "explains_liability_cap": true,
+      "plain_language": true,
+      "no_misrepresentation": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["legal", "contract", "plain language"]
+  },
+  {
+    "id": "sum_004",
+    "domain": "summarization",
+    "scenario": "technical_paper",
+    "difficulty": "hard",
+    "instruction": "Write a 3-sentence executive summary of this research abstract for a business audience.",
+    "source_text": "Abstract: We present NeuroCompress-7B, a novel post-training quantization framework for large language models that achieves 4-bit weight quantization with less than 0.5% perplexity degradation on standard benchmarks (WikiText-2, C4). Our method employs a layer-wise calibration procedure using a small 512-sample calibration set, followed by an iterative round-to-nearest optimization with activation-aware scale factors. Compared to GPTQ and AWQ baselines, NeuroCompress-7B reduces memory footprint by 68% while maintaining 97.3% of the original model's performance on MMLU. Inference throughput on A100 GPUs improves by 2.4x over FP16 baselines. We open-source the implementation and pre-quantized weights for 12 popular model families.",
+    "ideal_response_criteria": [
+      "Explains the practical benefit in non-technical terms (smaller, faster models)",
+      "Accurately represents the performance claims (97.3% retention, 2.4x speed)",
+      "Does not introduce technical jargon without explanation",
+      "Stays within 3 sentences",
+      "Captures the open-source availability as a key point"
+    ],
+    "rubric_checks": {
+      "max_sentences": 3,
+      "mentions_key_benefit": true,
+      "accurate_statistics": true,
+      "no_jargon_without_explanation": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["technical", "AI", "executive summary"]
+  },
+  {
+    "id": "sum_005",
+    "domain": "summarization",
+    "scenario": "email_chain",
+    "difficulty": "medium",
+    "instruction": "Summarize this email chain in one paragraph, capturing the core issue and current status.",
+    "source_text": "From: alice@corp.com\nTo: bob@corp.com\nSubject: Website downtime — urgent\nDate: June 3, 10:14am\nBob, our main website has been down since 9:45am. Users are getting 503 errors. Can you look into this?\n\nFrom: bob@corp.com\nTo: alice@corp.com\nDate: June 3, 10:28am\nOn it. Looks like the database server ran out of disk space. I'm freeing up space now. ETA 20 minutes.\n\nFrom: alice@corp.com\nTo: bob@corp.com\nDate: June 3, 10:52am\nStill seeing errors. Any update?\n\nFrom: bob@corp.com\nTo: alice@corp.com\nDate: June 3, 11:06am\nSorry for the delay — cleared the disk but there was also a corrupted index file. Fixed now, site should be back. I'll run a full audit to prevent this happening again.\n\nFrom: alice@corp.com\nTo: bob@corp.com\nDate: June 3, 11:09am\nConfirmed, site is back. Thanks for the quick fix. Please send me the audit findings when ready.",
+    "ideal_response_criteria": [
+      "Describes the incident (503 downtime from ~9:45am)",
+      "Captures the root cause (disk space + corrupted index)",
+      "Notes the resolution and timeline",
+      "Mentions the follow-up action (audit)",
+      "One clear paragraph, no bullet points"
+    ],
+    "rubric_checks": {
+      "mentions_downtime": true,
+      "mentions_root_cause": true,
+      "mentions_resolution": true,
+      "single_paragraph": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["email", "incident", "tech"]
+  },
+  {
+    "id": "sum_006",
+    "domain": "summarization",
+    "scenario": "one_sentence",
+    "difficulty": "medium",
+    "instruction": "Summarize the following product description in exactly one sentence.",
+    "source_text": "The ProSound X7 is a premium over-ear noise-canceling headphone featuring 40mm dynamic drivers, 30-hour battery life with fast charging (15 minutes = 3 hours playback), active noise cancellation rated at -38dB, and a foldable design for travel. It connects via Bluetooth 5.3 or a detachable 3.5mm cable, includes a carrying case, and is available in Midnight Black, Arctic White, and Forest Green. MSRP $299.",
+    "ideal_response_criteria": [
+      "Exactly one sentence",
+      "Captures the most important attributes (premium ANC headphones, key specs, price)",
+      "Is grammatically correct and fluent",
+      "Does not pad with filler words"
+    ],
+    "rubric_checks": {
+      "exactly_one_sentence": true,
+      "mentions_price_or_key_feature": true,
+      "grammatically_correct": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["product", "one-sentence", "constrained"]
+  },
+  {
+    "id": "sum_007",
+    "domain": "summarization",
+    "scenario": "bullet_format",
+    "difficulty": "easy",
+    "instruction": "Summarize the key risks identified in this section as bullet points.",
+    "source_text": "Risk Assessment Section 3: The project faces several significant risks. First, vendor dependency risk: 60% of our critical components are sourced from a single supplier in Southeast Asia, creating concentration risk if supply chains are disrupted. Second, timeline risk: the regulatory approval process has a historical variance of ±4 months, which could push the product launch past the holiday window. Third, market risk: a competing product from TechCorp is rumored to launch in Q3 at a 20% lower price point. Fourth, technical risk: our battery thermal management system has shown inconsistent performance in temperatures below -10°C during internal testing. Fifth, talent risk: two key engineers on the core team are currently interviewing with competitors.",
+    "ideal_response_criteria": [
+      "Presents exactly 5 risks as bullet points",
+      "Each bullet is concise but captures the key detail",
+      "Preserves all five risk categories (vendor, timeline, market, technical, talent)",
+      "Does not add risks not mentioned"
+    ],
+    "rubric_checks": {
+      "exactly_five_bullets": true,
+      "all_five_risk_types_present": true,
+      "no_fabricated_risks": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["risk", "bullets", "structured"]
+  },
+  {
+    "id": "sum_008",
+    "domain": "summarization",
+    "scenario": "contradictory_source",
+    "difficulty": "hard",
+    "instruction": "Summarize the following text.",
+    "source_text": "The new drug treatment showed promising results in the Phase 2 trial, with 72% of patients reporting improvement in symptoms. However, the trial had a sample size of only 47 patients, and the study authors note the results were not statistically significant (p=0.12). The lead researcher, Dr. Chen, described the results as 'very encouraging' and predicted FDA approval within 18 months. A peer reviewer quoted in the same press release called the claims 'premature' and noted that a Phase 3 trial with hundreds of patients would be needed to validate the findings.",
+    "ideal_response_criteria": [
+      "Accurately represents BOTH the positive claims and the scientific caveats",
+      "Does not cherry-pick only the positive or only the negative framing",
+      "Notes the lack of statistical significance",
+      "Represents the split expert opinion fairly"
+    ],
+    "rubric_checks": {
+      "mentions_positive_result": true,
+      "mentions_small_sample": true,
+      "mentions_not_statistically_significant": true,
+      "represents_both_views": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["medical", "contradictory", "edge_case", "balance"]
+  },
+  {
+    "id": "sum_009",
+    "domain": "summarization",
+    "scenario": "very_short_input",
+    "difficulty": "edge_case",
+    "instruction": "Please summarize the following text.",
+    "source_text": "OK.",
+    "ideal_response_criteria": [
+      "Handles the degenerate input gracefully",
+      "Does not hallucinate content",
+      "Explains that there is nothing meaningful to summarize",
+      "Does not crash or produce nonsense"
+    ],
+    "rubric_checks": {
+      "does_not_hallucinate": true,
+      "acknowledges_minimal_content": true,
+      "max_length_words": 50
+    },
+    "quality_dimensions": ["faithfulness", "coherence"],
+    "tags": ["edge_case", "minimal_input", "degenerate"]
+  },
+  {
+    "id": "sum_010",
+    "domain": "summarization",
+    "scenario": "financial_report",
+    "difficulty": "hard",
+    "instruction": "Summarize Q2 2026 performance highlights from this earnings snippet for a non-financial audience.",
+    "source_text": "Q2 2026 Earnings Highlights: Revenue came in at $4.2B, up 14% YoY and 3% above consensus estimates of $4.07B. Gross margin expanded 180bps to 67.3%, driven by software mix shift and operational leverage. EBITDA of $1.1B represented a 26.2% margin, up from 22.4% in Q2 2025. Free cash flow was $840M, funding $500M in share buybacks. The company raised full-year guidance: revenue $16.4-16.7B (vs prior $15.9-16.2B), and EPS guidance raised to $8.20-8.40 from $7.80-8.00. Net debt stood at $2.1B.",
+    "ideal_response_criteria": [
+      "Explains the results in plain terms without assuming finance knowledge",
+      "Covers revenue beat, margin improvement, raised guidance",
+      "Does not misrepresent any numbers",
+      "Is accessible to a general business reader"
+    ],
+    "rubric_checks": {
+      "plain_language": true,
+      "mentions_revenue_beat": true,
+      "mentions_raised_guidance": true,
+      "accurate_figures": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["finance", "earnings", "plain language"]
+  },
+  {
+    "id": "sum_011",
+    "domain": "summarization",
+    "scenario": "sensitive_content",
+    "difficulty": "hard",
+    "instruction": "Summarize the following incident report objectively.",
+    "source_text": "Incident Report — Workplace Harassment Complaint, Case #HR-2026-044. On May 14, 2026, Employee A filed a formal complaint alleging that their direct supervisor (Employee B) made repeated comments about their appearance over a three-week period, including one incident in a group meeting. Employee A described feeling uncomfortable and unable to focus on work. HR conducted interviews with Employee A, Employee B, and two witnesses on May 20-21. Employee B denied the comments were intended as inappropriate. One witness corroborated Employee A's account; another stated they did not recall the meeting incident. HR has concluded there is sufficient basis to proceed to a formal disciplinary review. A finding has not yet been made.",
+    "ideal_response_criteria": [
+      "Presents facts objectively without editorializing",
+      "Does not assume guilt before a formal finding",
+      "Accurately represents the evidence (mixed witness accounts)",
+      "Notes current status (proceeding to disciplinary review, no finding yet)",
+      "Does not use inflammatory language"
+    ],
+    "rubric_checks": {
+      "objective_tone": true,
+      "no_premature_judgment": true,
+      "mentions_mixed_witness_accounts": true,
+      "notes_current_status": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["HR", "sensitive", "objective", "edge_case"]
+  },
+  {
+    "id": "sum_012",
+    "domain": "summarization",
+    "scenario": "long_document_chunked",
+    "difficulty": "medium",
+    "instruction": "This is an excerpt from a 50-page climate report. Summarize the key findings in 4-5 bullet points.",
+    "source_text": "Chapter 4: Findings\n\n4.1 Global average temperatures have increased by 1.2°C above pre-industrial levels as of 2025, with the last decade being the warmest on record. At current emission trajectories, 1.5°C will be breached before 2035.\n\n4.2 Arctic sea ice extent has declined by 13% per decade since 1979, accelerating to 17% in the past five years. This has contributed to sea-level rise of 3.7mm/year, up from 1.5mm/year in the 1990s.\n\n4.3 Extreme weather events — droughts, floods, and heatwaves — have increased in frequency by 40% since 1980, with economic damages exceeding $250B annually on average over the past five years.\n\n4.4 Biodiversity loss is accelerating: 28% of assessed species are currently threatened, and deforestation rates increased 12% in 2024 despite international commitments to reverse deforestation by 2030.\n\n4.5 Renewable energy deployment reached a record 420GW of new capacity in 2025, but current investment of $1.8T/year remains $4.2T short of what the IEA estimates is needed to achieve net-zero by 2050.",
+    "ideal_response_criteria": [
+      "Captures 4-5 distinct findings",
+      "Preserves key quantitative data accurately",
+      "Accessible language without losing precision",
+      "Does not introduce data not in the text"
+    ],
+    "rubric_checks": {
+      "four_to_five_bullets": true,
+      "accurate_key_statistics": true,
+      "no_fabricated_data": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["climate", "data-heavy", "bullets"]
+  },
+  {
+    "id": "sum_013",
+    "domain": "summarization",
+    "scenario": "social_media_thread",
+    "difficulty": "medium",
+    "instruction": "Summarize the overall sentiment and main themes from this Twitter/X thread.",
+    "source_text": "Tweet 1 @user_a: Just tried the new @CafePronto espresso machine and WOW. Best home espresso I've ever made. Total game changer. #coffee\n\nTweet 2 @user_b: @user_a Hmm, I've had the opposite experience. Mine started leaking after 3 months. Customer service was useless.\n\nTweet 3 @user_c: @user_b Same here. The milk frother broke in week 2. Beautiful machine but poor build quality.\n\nTweet 4 @user_d: Mine's been perfect for a year. Amazing espresso, dead silent. Worth every penny.\n\nTweet 5 @user_e: @user_b @user_c This is a known issue with the 2025 batch. The 2026 version supposedly fixed the seal problem. Check the serial number.\n\nTweet 6 @user_a: @user_b Oh no, I hope mine holds up. I've only had it 2 weeks!",
+    "ideal_response_criteria": [
+      "Captures mixed sentiment (split positive/negative)",
+      "Identifies the key theme of build quality / durability concerns",
+      "Mentions the 2025 vs 2026 batch distinction as a relevant detail",
+      "Does not exaggerate consensus in either direction"
+    ],
+    "rubric_checks": {
+      "captures_mixed_sentiment": true,
+      "mentions_durability_issue": true,
+      "mentions_batch_distinction": true,
+      "balanced_representation": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["social media", "sentiment", "product review"]
+  },
+  {
+    "id": "sum_014",
+    "domain": "summarization",
+    "scenario": "repetitive_content",
+    "difficulty": "medium",
+    "instruction": "Summarize the following internal memo, removing redundancy.",
+    "source_text": "To: All Staff\nSubject: Office Closure — July 4th Holiday\n\nDear Team,\n\nI'm writing to let everyone know that the office will be closed on July 4th in observance of Independence Day. The office will not be open on July 4th. Because July 4th is a U.S. federal holiday, the office will be closed for the day. Please note this is a holiday closure for July 4th. Regular office hours will resume on July 5th. If you have questions about the July 4th office closure, please contact HR. Thank you for noting that on July 4th the office will be closed.\n\nBest,\nManagement",
+    "ideal_response_criteria": [
+      "Removes all the unnecessary repetition",
+      "Covers the core message: office closed July 4th, reopens July 5th, contact HR for questions",
+      "Is significantly shorter than the original",
+      "Maintains professional tone"
+    ],
+    "rubric_checks": {
+      "captures_core_message": true,
+      "significantly_shorter": true,
+      "mentions_reopening_date": true
+    },
+    "quality_dimensions": ["faithfulness", "conciseness", "coherence"],
+    "tags": ["redundant", "office memo", "compression"]
+  },
+  {
+    "id": "sum_015",
+    "domain": "summarization",
+    "scenario": "medical_accuracy",
+    "difficulty": "hard",
+    "instruction": "Summarize this patient information leaflet excerpt in simple terms for a patient with limited health literacy.",
+    "source_text": "Metformin Hydrochloride 500mg Tablets. Indications: Management of type 2 diabetes mellitus, particularly in overweight patients, when diet and exercise alone have not been sufficient. Contraindications: Renal impairment (eGFR <30 mL/min/1.73m²), hepatic impairment, acute or chronic metabolic acidosis including diabetic ketoacidosis. Common side effects (affecting >1 in 10 patients): nausea, vomiting, diarrhoea, abdominal pain, loss of appetite. These are usually temporary and occur early in treatment. Serious rare side effect: lactic acidosis. Stop taking and seek medical attention immediately if you experience: muscle pain, weakness, trouble breathing, stomach pain, nausea, or feeling cold.",
+    "ideal_response_criteria": [
+      "Plain, accessible language — no medical jargon without explanation",
+      "Covers: what it's for, who shouldn't take it, common side effects, serious warning",
+      "Accurately conveys the serious warning about lactic acidosis",
+      "Does not omit the serious side effect",
+      "Does not make the patient feel alarmed but does convey the serious warning"
+    ],
+    "rubric_checks": {
+      "plain_language": true,
+      "covers_side_effects": true,
+      "covers_serious_warning": true,
+      "accurate_representation": true,
+      "no_omission_of_key_warnings": true
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["medical", "plain language", "accuracy_critical"]
+  },
+  {
+    "id": "sum_016",
+    "domain": "summarization",
+    "scenario": "conflicting_instruction",
+    "difficulty": "edge_case",
+    "instruction": "Summarize this in one word.",
+    "source_text": "The annual shareholder meeting covered five major agenda items: the election of board members (all seven incumbents re-elected), approval of the executive compensation plan (passed with 63% approval despite proxy advisor opposition), the ratification of PwC as auditor, a shareholder proposal on climate disclosure requirements (defeated with 44% support, above last year's 31%), and a management proposal to authorize a new $2B share repurchase program (approved). CEO remarks focused on the company's AI strategy and announced a new partnership with a major cloud provider.",
+    "ideal_response_criteria": [
+      "Either attempts a one-word summary and acknowledges the limitation",
+      "OR explains that a meaningful one-word summary is not possible for complex content",
+      "Does not silently produce a multi-word response while claiming to follow instructions",
+      "Offers an alternative (e.g., one sentence) if one word is inadequate"
+    ],
+    "rubric_checks": {
+      "handles_constraint_gracefully": true,
+      "does_not_ignore_constraint": true
+    },
+    "quality_dimensions": ["faithfulness", "coherence"],
+    "tags": ["edge_case", "impossible_constraint", "meta"]
+  },
+  {
+    "id": "sum_017",
+    "domain": "summarization",
+    "scenario": "multi_document",
+    "difficulty": "hard",
+    "instruction": "These are two analyst opinions on the same company. Write a balanced 3-sentence synthesis.",
+    "source_text": "Analyst A (Buy, $185 target): 'TechCorp's cloud business is accelerating with 34% YoY growth and expanding margins. The company's AI product roadmap is best-in-class and we expect significant monetization over the next 18 months. Valuation at 28x forward earnings is justified given the growth trajectory.'\n\nAnalyst B (Sell, $110 target): 'TechCorp's legacy software division continues to shrink at -8% YoY, offsetting cloud gains. Management has consistently overpromised on AI monetization timelines with limited execution. The stock is expensive at 28x earnings when peer multiples average 19x, and we see significant downside risk.'",
+    "ideal_response_criteria": [
+      "Accurately represents both the bull and bear case",
+      "Notes the specific point of agreement (28x multiple) even though interpretation differs",
+      "Does not take sides or create false consensus",
+      "Covers the key disagreements (AI monetization, legacy drag, valuation)"
+    ],
+    "rubric_checks": {
+      "represents_both_views": true,
+      "notes_valuation_disagreement": true,
+      "no_false_consensus": true,
+      "max_sentences": 3
+    },
+    "quality_dimensions": ["faithfulness", "coverage", "conciseness", "coherence"],
+    "tags": ["finance", "synthesis", "multi-source", "balance"]
+  }
+]

@@ -1,0 +1,180 @@
+{
+  "total_cases": 55,
+  "total_errors": 0,
+  "avg_judge_score": 0.7397,
+  "avg_rubric_score": 0.7722,
+  "avg_composite_score": 0.7494,
+  "by_domain": {
+    "support": {
+      "n_cases": 20,
+      "n_errors": 0,
+      "avg_judge_score": 0.7686,
+      "avg_rubric_score": 0.7962,
+      "avg_composite_score": 0.7769,
+      "dimension_averages": {
+        "accuracy": 0.75,
+        "empathy": 0.7885,
+        "completeness": 0.7917,
+        "actionability": 0.7632,
+        "safety": 0.6667
+      },
+      "by_difficulty": {
+        "easy": 0.8635,
+        "medium": 0.7827,
+        "hard": 0.6823
+      },
+      "score_distribution": {
+        "0-20": 0,
+        "20-40": 0,
+        "40-60": 0,
+        "60-80": 12,
+        "80-100": 8
+      }
+    },
+    "summarization": {
+      "n_cases": 17,
+      "n_errors": 0,
+      "avg_judge_score": 0.6985,
+      "avg_rubric_score": 0.7234,
+      "avg_composite_score": 0.706,
+      "dimension_averages": {
+        "faithfulness": 0.6765,
+        "coverage": 0.7321,
+        "conciseness": 0.6833,
+        "coherence": 0.7353
+      },
+      "by_difficulty": {
+        "easy": 0.805,
+        "medium": 0.7783,
+        "hard": 0.6584,
+        "edge_case": 0.5565
+      },
+      "score_distribution": {
+        "0-20": 0,
+        "20-40": 0,
+        "40-60": 2,
+        "60-80": 12,
+        "80-100": 3
+      }
+    },
+    "coding": {
+      "n_cases": 18,
+      "n_errors": 0,
+      "avg_judge_score": 0.7466,
+      "avg_rubric_score": 0.7916,
+      "avg_composite_score": 0.76,
+      "dimension_averages": {
+        "correctness": 0.75,
+        "code_quality": 0.7667,
+        "clarity": 0.7308,
+        "edge_case_handling": 0.7188
+      },
+      "by_difficulty": {
+        "easy": 0.8867,
+        "medium": 0.7646,
+        "hard": 0.6898
+      },
+      "score_distribution": {
+        "0-20": 0,
+        "20-40": 0,
+        "40-60": 1,
+        "60-80": 14,
+        "80-100": 3
+      }
+    }
+  },
+  "worst_cases": [
+    {
+      "case_id": "sum_016",
+      "domain": "summarization",
+      "difficulty": "edge_case",
+      "composite_score": 0.544,
+      "judge_score": 0.5,
+      "rubric_score": 0.646,
+      "judge_comment": "The summary partially captures the source material. Some important details are missing."
+    },
+    {
+      "case_id": "cod_006",
+      "domain": "coding",
+      "difficulty": "hard",
+      "composite_score": 0.55,
+      "judge_score": 0.562,
+      "rubric_score": 0.522,
+      "judge_comment": "The code is functionally correct but could be improved. Some edge cases are not addressed."
+    },
+    {
+      "case_id": "sum_009",
+      "domain": "summarization",
+      "difficulty": "edge_case",
+      "composite_score": 0.569,
+      "judge_score": 0.625,
+      "rubric_score": 0.44,
+      "judge_comment": "The summary partially captures the source material. Some important details are missing."
+    },
+    {
+      "case_id": "sum_004",
+      "domain": "summarization",
+      "difficulty": "hard",
+      "composite_score": 0.6,
+      "judge_score": 0.562,
+      "rubric_score": 0.686,
+      "judge_comment": "The summary partially captures the source material. Some important details are missing."
+    },
+    {
+      "case_id": "sum_010",
+      "domain": "summarization",
+      "difficulty": "hard",
+      "composite_score": 0.603,
+      "judge_score": 0.562,
+      "rubric_score": 0.698,
+      "judge_comment": "The summary partially captures the source material. Some important details are missing."
+    }
+  ],
+  "best_cases": [
+    {
+      "case_id": "sup_019",
+      "domain": "support",
+      "difficulty": "easy",
+      "composite_score": 0.85,
+      "judge_score": 0.875,
+      "rubric_score": 0.791,
+      "judge_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic."
+    },
+    {
+      "case_id": "sup_013",
+      "domain": "support",
+      "difficulty": "easy",
+      "composite_score": 0.935,
+      "judge_score": 0.917,
+      "rubric_score": 0.979,
+      "judge_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic."
+    },
+    {
+      "case_id": "cod_009",
+      "domain": "coding",
+      "difficulty": "easy",
+      "composite_score": 0.937,
+      "judge_score": 0.917,
+      "rubric_score": 0.985,
+      "judge_comment": "The code is correct and well-structured. Edge cases are handled."
+    },
+    {
+      "case_id": "sup_010",
+      "domain": "support",
+      "difficulty": "easy",
+      "composite_score": 0.942,
+      "judge_score": 0.917,
+      "rubric_score": 1.0,
+      "judge_comment": "The response handles the customer's  situation well. Tone is appropriate and empathetic."
+    },
+    {
+      "case_id": "cod_001",
+      "domain": "coding",
+      "difficulty": "easy",
+      "composite_score": 0.953,
+      "judge_score": 0.938,
+      "rubric_score": 0.99,
+      "judge_comment": "The code is correct and well-structured. Edge cases are handled."
+    }
+  ]
+}

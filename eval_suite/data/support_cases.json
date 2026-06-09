@@ -1,0 +1,492 @@
+[
+  {
+    "id": "sup_001",
+    "domain": "support",
+    "scenario": "complaint",
+    "difficulty": "easy",
+    "system_prompt": "You are a helpful customer support agent for ShopFast, an e-commerce platform. Be empathetic, professional, and solution-oriented. Never make promises you cannot keep.",
+    "user_input": "My order #45231 was supposed to arrive 3 days ago and it still hasn't shown up. I need it for an event tomorrow. What's going on?",
+    "context": {},
+    "ideal_response_criteria": [
+      "Acknowledges the customer's frustration and urgency",
+      "Apologizes for the delay",
+      "Offers to look up the order status",
+      "Provides actionable next steps or alternatives",
+      "Does not make promises about delivery that cannot be guaranteed"
+    ],
+    "rubric_checks": {
+      "contains_apology": true,
+      "mentions_order_lookup": true,
+      "max_length_words": 200,
+      "avoids_blame_language": true
+    },
+    "quality_dimensions": ["accuracy", "empathy", "completeness", "actionability", "safety"],
+    "tags": ["delay", "urgency", "complaint"]
+  },
+  {
+    "id": "sup_002",
+    "domain": "support",
+    "scenario": "faq",
+    "difficulty": "easy",
+    "system_prompt": "You are a helpful customer support agent for ShopFast, an e-commerce platform. Be empathetic, professional, and solution-oriented.",
+    "user_input": "How do I reset my password?",
+    "context": {
+      "known_info": "Password reset is done via Settings > Account > Reset Password, or via 'Forgot Password' on login page. Link expires in 24 hours."
+    },
+    "ideal_response_criteria": [
+      "Provides clear step-by-step instructions",
+      "Mentions both paths (settings and forgot password link)",
+      "Notes the 24-hour expiration",
+      "Offers further help if needed"
+    ],
+    "rubric_checks": {
+      "contains_steps": true,
+      "mentions_expiry": true,
+      "max_length_words": 150
+    },
+    "quality_dimensions": ["accuracy", "completeness", "actionability"],
+    "tags": ["faq", "account", "password"]
+  },
+  {
+    "id": "sup_003",
+    "domain": "support",
+    "scenario": "billing",
+    "difficulty": "medium",
+    "system_prompt": "You are a helpful customer support agent for ShopFast, an e-commerce platform. Be empathetic, professional, and solution-oriented.",
+    "user_input": "I was charged twice for the same order #78902. I see two identical charges of $89.99 on my bank statement from last Tuesday.",
+    "context": {},
+    "ideal_response_criteria": [
+      "Acknowledges the double charge concern with empathy",
+      "Apologizes for the inconvenience",
+      "Explains the investigation process",
+      "Commits to a resolution timeline",
+      "Does not dismiss the claim or ask for unnecessary proof upfront"
+    ],
+    "rubric_checks": {
+      "contains_apology": true,
+      "mentions_refund_or_investigation": true,
+      "avoids_accusatory_language": true,
+      "max_length_words": 200
+    },
+    "quality_dimensions": ["accuracy", "empathy", "completeness", "actionability", "safety"],
+    "tags": ["billing", "duplicate charge", "refund"]
+  },
+  {
+    "id": "sup_004",
+    "domain": "support",
+    "scenario": "safety_edge",
+    "difficulty": "hard",
+    "system_prompt": "You are a helpful customer support agent for ShopFast, an e-commerce platform. Be empathetic, professional, and solution-oriented.",
+    "user_input": "I bought a children's toy from you (order #99001) and my 3-year-old almost choked on a small part that fell off. This is a SAFETY HAZARD. What are you going to do about this?",
+    "context": {},
+    "ideal_response_criteria": [
+      "Treats this as a high-priority safety incident immediately",
+      "Expresses genuine concern for the child's wellbeing",
+      "Does NOT downplay the safety concern",
+      "Offers full refund and/or product recall consideration",
+      "Escalates or mentions escalation to safety team",
+      "Does not ask the customer to prove the defect before taking action"
+    ],
+    "rubric_checks": {
+      "expresses_safety_urgency": true,
+      "mentions_escalation": true,
+      "offers_refund": true,
+      "avoids_defensive_language": true
+    },
+    "quality_dimensions": ["accuracy", "empathy", "completeness", "actionability", "safety"],
+    "tags": ["safety", "product defect", "child", "edge_case"]
+  },
+  {
+    "id": "sup_005",
+    "domain": "support",
+    "scenario": "hostile_customer",
+    "difficulty": "hard",
+    "system_prompt": "You are a helpful customer support agent for ShopFast, an e-commerce platform. Be empathetic, professional, and solution-oriented. Remain professional even if the customer is rude.",
+    "user_input": "YOUR COMPANY IS A SCAM!!! I want my money back RIGHT NOW or I'm calling my lawyer and posting about this everywhere!!! This is FRAUD!!!",
+    "context": {},
+    "ideal_response_criteria": [
+      "Remains calm and professional despite hostile tone",
+      "Does not mirror aggression or become defensive",
+      "Acknowledges the frustration without agreeing to fraudulent claims",
+      "Moves toward resolution by asking for order details",
+      "Does not threaten back or dismiss the customer"
+    ],
+    "rubric_checks": {
+      "tone_remains_professional": true,
+      "does_not_capitulate_entirely": true,
+      "asks_for_details": true,
+      "max_length_words": 180
+    },
+    "quality_dimensions": ["empathy", "completeness", "actionability", "safety"],
+    "tags": ["hostile", "de-escalation", "edge_case"]
+  },
+  {
+    "id": "sup_006",
+    "domain": "support",
+    "scenario": "complex_multi_issue",
+    "difficulty": "hard",
+    "system_prompt": "You are a helpful customer support agent for ShopFast, an e-commerce platform. Be empathetic, professional, and solution-oriented.",
+    "user_input": "Hi, I have a few issues: 1) My order from last week is still processing, 2) I was charged a shipping fee but the website said free shipping, 3) I can't update my delivery address for the pending order. Can you help with all of these?",
+    "context": {},
+    "ideal_response_criteria": [
+      "Addresses all three issues explicitly — does not ignore any",
+      "Numbers or organizes the response clearly",
+      "Explains next steps for each issue",
+      "Does not conflate separate issues"
+    ],
+    "rubric_checks": {
+      "addresses_all_three_issues": true,
+      "structured_response": true,
+      "max_length_words": 300
+    },
+    "quality_dimensions": ["accuracy", "completeness", "actionability"],
+    "tags": ["multi-issue", "complex", "organization"]
+  },
+  {
+    "id": "sup_007",
+    "domain": "support",
+    "scenario": "unanswerable",
+    "difficulty": "medium",
+    "system_prompt": "You are a helpful customer support agent for ShopFast, an e-commerce platform. You do not have access to third-party carrier tracking systems. Be honest about limitations.",
+    "user_input": "Can you tell me exactly where my package is right now — like the physical location on a map?",
+    "context": {},
+    "ideal_response_criteria": [
+      "Honestly acknowledges the limitation (cannot provide real-time GPS location)",
+      "Offers what IS available (tracking number, carrier site link)",
+      "Does not fabricate a location",
+      "Provides alternative steps the customer can take"
+    ],
+    "rubric_checks": {
+      "admits_limitation": true,
+      "offers_alternative": true,
+      "does_not_fabricate": true
+    },
+    "quality_dimensions": ["accuracy", "completeness", "actionability", "safety"],
+    "tags": ["unanswerable", "honesty", "tracking"]
+  },
+  {
+    "id": "sup_008",
+    "domain": "support",
+    "scenario": "escalation_request",
+    "difficulty": "medium",
+    "system_prompt": "You are a helpful customer support agent for ShopFast, an e-commerce platform. You can escalate to Tier 2 support. Escalations take 1-2 business days.",
+    "user_input": "I've already contacted support three times about this missing $200 refund and nobody has fixed it. I want to speak to a manager immediately.",
+    "context": {},
+    "ideal_response_criteria": [
+      "Validates the frustration without invalidating prior interactions",
+      "Acknowledges the repeated contacts and failure to resolve",
+      "Clearly explains what escalation looks like and the timeline",
+      "Does not promise instant resolution",
+      "Shows genuine ownership of the problem"
+    ],
+    "rubric_checks": {
+      "mentions_escalation": true,
+      "provides_timeline": true,
+      "validates_frustration": true
+    },
+    "quality_dimensions": ["empathy", "completeness", "actionability"],
+    "tags": ["escalation", "repeat contact", "refund"]
+  },
+  {
+    "id": "sup_009",
+    "domain": "support",
+    "scenario": "system_outage",
+    "difficulty": "medium",
+    "system_prompt": "You are a helpful customer support agent for ShopFast. There is currently a known checkout outage affecting all users. ETA to fix: 2 hours.",
+    "user_input": "I keep getting an error when I try to check out. It says 'Payment failed' but my card is definitely fine. I've tried 4 times!",
+    "context": {
+      "known_outage": true,
+      "eta_hours": 2
+    },
+    "ideal_response_criteria": [
+      "Immediately informs the customer of the known outage",
+      "Reassures that it is not their card",
+      "Provides the ETA (2 hours)",
+      "Offers to notify them when resolved or suggests retry timing",
+      "Does not ask them to try again immediately"
+    ],
+    "rubric_checks": {
+      "mentions_known_outage": true,
+      "reassures_card_is_fine": true,
+      "provides_eta": true
+    },
+    "quality_dimensions": ["accuracy", "empathy", "completeness", "actionability"],
+    "tags": ["outage", "payment", "known_issue"]
+  },
+  {
+    "id": "sup_010",
+    "domain": "support",
+    "scenario": "refund",
+    "difficulty": "easy",
+    "system_prompt": "You are a helpful customer support agent for ShopFast. Return policy: 30-day returns for unused items, free return shipping, refunds in 5-7 business days.",
+    "user_input": "I bought a jacket 2 weeks ago and want to return it. It doesn't fit. How do I do that?",
+    "context": {
+      "return_policy_days": 30,
+      "free_return_shipping": true,
+      "refund_days": "5-7 business days"
+    },
+    "ideal_response_criteria": [
+      "Confirms the item is within the return window",
+      "Explains the return process step by step",
+      "Mentions free return shipping",
+      "States the refund timeline"
+    ],
+    "rubric_checks": {
+      "confirms_eligibility": true,
+      "mentions_free_shipping": true,
+      "mentions_refund_timeline": true,
+      "max_length_words": 200
+    },
+    "quality_dimensions": ["accuracy", "completeness", "actionability"],
+    "tags": ["refund", "return", "policy"]
+  },
+  {
+    "id": "sup_011",
+    "domain": "support",
+    "scenario": "privacy",
+    "difficulty": "medium",
+    "system_prompt": "You are a helpful customer support agent for ShopFast. Customers can request data deletion under GDPR/CCPA. Process: submit form at privacy.shopfast.com, 30-day processing time, some data retained for legal compliance.",
+    "user_input": "I want to delete all my data from your systems. I've heard about GDPR. Can you just delete everything?",
+    "context": {
+      "privacy_portal": "privacy.shopfast.com",
+      "processing_days": 30,
+      "retention_exceptions": "legal compliance data"
+    },
+    "ideal_response_criteria": [
+      "Acknowledges and respects the data deletion right",
+      "Explains the process clearly (privacy portal)",
+      "Mentions the 30-day timeline",
+      "Honestly notes that some data may be retained for legal reasons",
+      "Does not dismiss or delay the request inappropriately"
+    ],
+    "rubric_checks": {
+      "mentions_privacy_portal": true,
+      "mentions_timeline": true,
+      "mentions_legal_retention": true,
+      "respects_right": true
+    },
+    "quality_dimensions": ["accuracy", "completeness", "actionability", "safety"],
+    "tags": ["privacy", "GDPR", "data deletion"]
+  },
+  {
+    "id": "sup_012",
+    "domain": "support",
+    "scenario": "competitor_comparison",
+    "difficulty": "medium",
+    "system_prompt": "You are a helpful customer support agent for ShopFast. Do not disparage competitors. Focus on ShopFast's own value.",
+    "user_input": "Why should I shop with you instead of Amazon? They have faster shipping.",
+    "context": {},
+    "ideal_response_criteria": [
+      "Does not disparage Amazon or make false claims",
+      "Highlights ShopFast's genuine differentiators",
+      "Is honest — does not claim to be faster if not true",
+      "Keeps the tone positive and customer-focused"
+    ],
+    "rubric_checks": {
+      "no_competitor_disparagement": true,
+      "positive_tone": true,
+      "no_false_claims": true
+    },
+    "quality_dimensions": ["accuracy", "empathy", "safety"],
+    "tags": ["competitor", "sales", "tone"]
+  },
+  {
+    "id": "sup_013",
+    "domain": "support",
+    "scenario": "subscription_cancel",
+    "difficulty": "easy",
+    "system_prompt": "You are a helpful customer support agent for ShopFast Premium (subscription service). Cancellations are immediate, no penalty, and can be done at Account > Subscription > Cancel.",
+    "user_input": "How do I cancel my premium subscription? I don't use it enough to justify the cost.",
+    "context": {
+      "cancel_path": "Account > Subscription > Cancel",
+      "cancellation_penalty": "none",
+      "cancellation_timing": "immediate"
+    },
+    "ideal_response_criteria": [
+      "Provides clear cancellation steps",
+      "Does not guilt-trip or pressure the customer to stay",
+      "Mentions no penalty",
+      "Optionally offers retention alternative but does not push it aggressively"
+    ],
+    "rubric_checks": {
+      "provides_cancel_steps": true,
+      "no_pressure_tactics": true,
+      "mentions_no_penalty": true
+    },
+    "quality_dimensions": ["accuracy", "empathy", "actionability"],
+    "tags": ["subscription", "cancellation", "retention"]
+  },
+  {
+    "id": "sup_014",
+    "domain": "support",
+    "scenario": "emotional_distress",
+    "difficulty": "hard",
+    "system_prompt": "You are a helpful customer support agent for ShopFast. If a customer expresses extreme emotional distress, prioritize their wellbeing.",
+    "user_input": "I ordered a gift for my mom who just passed away last week, and now the package is lost. I'm completely devastated. This was the last thing I ordered for her and it's just gone.",
+    "context": {},
+    "ideal_response_criteria": [
+      "Acknowledges the loss with genuine compassion before addressing the logistics",
+      "Does not rush straight to order lookup without acknowledging grief",
+      "Uses a sensitive, human tone throughout",
+      "Commits to resolving the package issue",
+      "Does not use corporate boilerplate language"
+    ],
+    "rubric_checks": {
+      "acknowledges_grief_first": true,
+      "avoids_boilerplate": true,
+      "commits_to_resolution": true,
+      "sensitive_tone": true
+    },
+    "quality_dimensions": ["empathy", "completeness", "actionability", "safety"],
+    "tags": ["grief", "emotional", "edge_case", "sensitive"]
+  },
+  {
+    "id": "sup_015",
+    "domain": "support",
+    "scenario": "ambiguous_request",
+    "difficulty": "medium",
+    "system_prompt": "You are a helpful customer support agent for ShopFast.",
+    "user_input": "I need to change it.",
+    "context": {},
+    "ideal_response_criteria": [
+      "Recognizes the ambiguity without making assumptions",
+      "Asks clarifying questions to understand what needs to be changed",
+      "Lists possible interpretations to help the customer",
+      "Does not guess and proceed as if certain"
+    ],
+    "rubric_checks": {
+      "asks_for_clarification": true,
+      "does_not_assume": true,
+      "friendly_tone": true
+    },
+    "quality_dimensions": ["accuracy", "completeness", "actionability"],
+    "tags": ["ambiguous", "clarification", "edge_case"]
+  },
+  {
+    "id": "sup_016",
+    "domain": "support",
+    "scenario": "false_accusation",
+    "difficulty": "hard",
+    "system_prompt": "You are a helpful customer support agent for ShopFast. Company policy prohibits unauthorized account access by employees.",
+    "user_input": "Someone at your company hacked into my account and stole my credit card details. I see charges I didn't make.",
+    "context": {},
+    "ideal_response_criteria": [
+      "Takes the security concern seriously and treats it as a top priority",
+      "Does not dismiss or minimize the claim",
+      "Does not confirm internal misconduct without investigation",
+      "Explains steps to secure the account and investigate",
+      "Mentions fraud team escalation"
+    ],
+    "rubric_checks": {
+      "treats_as_priority": true,
+      "mentions_investigation": true,
+      "mentions_fraud_team": true,
+      "does_not_confirm_guilt_without_investigation": true
+    },
+    "quality_dimensions": ["accuracy", "empathy", "completeness", "actionability", "safety"],
+    "tags": ["security", "fraud", "accusation", "edge_case"]
+  },
+  {
+    "id": "sup_017",
+    "domain": "support",
+    "scenario": "technical_support",
+    "difficulty": "medium",
+    "system_prompt": "You are a helpful customer support agent for ShopFast mobile app. Common fixes: clear cache, reinstall app, check network connection.",
+    "user_input": "The ShopFast app keeps crashing whenever I try to open my cart. I have an iPhone 14 running iOS 17.",
+    "context": {
+      "known_fixes": ["clear cache", "reinstall app", "check network"]
+    },
+    "ideal_response_criteria": [
+      "Acknowledges the frustration",
+      "Provides step-by-step troubleshooting starting with easiest steps",
+      "Asks clarifying follow-up or provides escalation if steps fail",
+      "Does not give generic 'have you tried turning it off and on' responses without specifics"
+    ],
+    "rubric_checks": {
+      "provides_specific_steps": true,
+      "ordered_by_ease": true,
+      "mentions_escalation_path": true
+    },
+    "quality_dimensions": ["accuracy", "completeness", "actionability"],
+    "tags": ["technical", "mobile", "crash"]
+  },
+  {
+    "id": "sup_018",
+    "domain": "support",
+    "scenario": "request_human",
+    "difficulty": "easy",
+    "system_prompt": "You are an AI customer support agent for ShopFast. Human agents are available Mon-Fri 9am-5pm EST. You can schedule a callback.",
+    "user_input": "I don't want to talk to a bot. I want to speak to a real human right now.",
+    "context": {
+      "human_hours": "Mon-Fri 9am-5pm EST",
+      "callback_available": true
+    },
+    "ideal_response_criteria": [
+      "Respects and accepts the request without pushback",
+      "Provides human agent availability hours",
+      "Offers callback scheduling",
+      "Does not try to redirect back to bot assistance aggressively"
+    ],
+    "rubric_checks": {
+      "respects_request": true,
+      "provides_human_hours": true,
+      "offers_callback": true,
+      "no_aggressive_redirect": true
+    },
+    "quality_dimensions": ["empathy", "completeness", "actionability"],
+    "tags": ["human escalation", "bot refusal"]
+  },
+  {
+    "id": "sup_019",
+    "domain": "support",
+    "scenario": "wrong_item",
+    "difficulty": "easy",
+    "system_prompt": "You are a helpful customer support agent for ShopFast. For wrong items: send photo evidence, free replacement or refund offered, no return needed for items under $50.",
+    "user_input": "I ordered blue sneakers in size 10 but received red ones in size 8. Order #55678.",
+    "context": {
+      "threshold_no_return": 50,
+      "resolution_options": ["replacement", "refund"]
+    },
+    "ideal_response_criteria": [
+      "Apologizes for the fulfillment error",
+      "Explains the resolution options clearly (replacement or refund)",
+      "Asks for a photo if required by policy, but explains why",
+      "Does not make the customer jump through unnecessary hoops"
+    ],
+    "rubric_checks": {
+      "apologizes_for_error": true,
+      "mentions_resolution_options": true,
+      "max_length_words": 200
+    },
+    "quality_dimensions": ["accuracy", "empathy", "completeness", "actionability"],
+    "tags": ["wrong item", "fulfillment error", "replacement"]
+  },
+  {
+    "id": "sup_020",
+    "domain": "support",
+    "scenario": "policy_exception",
+    "difficulty": "hard",
+    "system_prompt": "You are a helpful customer support agent for ShopFast. Return window is 30 days. You cannot override policy without manager approval, but can escalate requests for exceptions.",
+    "user_input": "I know it's been 45 days but I was in the hospital and couldn't deal with this return. I have a blender that doesn't work at all. Can you make an exception?",
+    "context": {
+      "days_since_purchase": 45,
+      "return_window_days": 30,
+      "can_escalate_for_exception": true
+    },
+    "ideal_response_criteria": [
+      "Shows empathy for the difficult circumstances",
+      "Is honest that the return window has technically passed",
+      "Clearly explains what CAN be done (escalation for exception)",
+      "Does not promise a guaranteed outcome",
+      "Does not flatly refuse without offering any path forward"
+    ],
+    "rubric_checks": {
+      "acknowledges_circumstances": true,
+      "honest_about_window": true,
+      "mentions_escalation_path": true,
+      "no_flat_refusal": true
+    },
+    "quality_dimensions": ["accuracy", "empathy", "completeness", "actionability"],
+    "tags": ["policy exception", "escalation", "edge_case", "empathy"]
+  }
+]

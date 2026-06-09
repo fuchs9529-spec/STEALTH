@@ -1,0 +1,2354 @@
+[
+  {
+    "case_id": "sup_001",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Acknowledges the customer's frustration and urgency. Apologizes for the delay. Offers to look up the order status. Provides actionable next steps or alternatives. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 0.95,
+    "rubric_score": 1.0,
+    "composite_score": 0.9649999999999999,
+    "latency_ms": 0.00589998671784997,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "contains_apology": true,
+      "mentions_order_lookup": true,
+      "max_length_words": true,
+      "avoids_blame_language": true
+    }
+  },
+  {
+    "case_id": "sup_002",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Provides clear step-by-step instructions. Mentions both paths (settings and forgot password link). Notes the 24-hour expiration. Offers further help if needed. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.0032999669201672077,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "contains_steps": true,
+      "mentions_expiry": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_003",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Acknowledges the double charge concern with empathy. Apologizes for the inconvenience. Explains the investigation process. Commits to a resolution timeline. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 0.95,
+    "rubric_score": 1.0,
+    "composite_score": 0.9649999999999999,
+    "latency_ms": 0.00200001522898674,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "contains_apology": true,
+      "mentions_refund_or_investigation": true,
+      "avoids_accusatory_language": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_004",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Treats this as a high-priority safety incident immediately. Expresses genuine concern for the child's wellbeing. Does NOT downplay the safety concern. Offers full refund and/or product recall consideration. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 83%.",
+    "judge_score": 0.95,
+    "rubric_score": 1.0,
+    "composite_score": 0.9649999999999999,
+    "latency_ms": 0.001700012944638729,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "expresses_safety_urgency": true,
+      "mentions_escalation": true,
+      "offers_refund": true,
+      "avoids_defensive_language": true
+    }
+  },
+  {
+    "case_id": "sup_005",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Remains calm and professional despite hostile tone. Does not mirror aggression or become defensive. Acknowledges the frustration without agreeing to fraudulent claims. Moves toward resolution by asking for order details. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001900014467537403,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "tone_remains_professional": true,
+      "does_not_capitulate_entirely": true,
+      "asks_for_details": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_006",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Addresses all three issues explicitly \u2014 does not ignore any. Numbers or organizes the response clearly. Explains next steps for each issue. Does not conflate separate issues. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.002500019036233425,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "addresses_all_three_issues": true,
+      "structured_response": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_007",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Honestly acknowledges the limitation (cannot provide real-time GPS location). Offers what IS available (tracking number, carrier site link). Does not fabricate a location. Provides alternative steps the customer can take. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.0022999593056738377,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "admits_limitation": true,
+      "offers_alternative": true,
+      "does_not_fabricate": true
+    }
+  },
+  {
+    "case_id": "sup_008",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Validates the frustration without invalidating prior interactions. Acknowledges the repeated contacts and failure to resolve. Clearly explains what escalation looks like and the timeline. Does not promise instant resolution. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001800013706088066,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "mentions_escalation": true,
+      "provides_timeline": true,
+      "validates_frustration": true
+    }
+  },
+  {
+    "case_id": "sup_009",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Immediately informs the customer of the known outage. Reassures that it is not their card. Provides the ETA (2 hours). Offers to notify them when resolved or suggests retry timing. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001500011421740055,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "mentions_known_outage": true,
+      "reassures_card_is_fine": true,
+      "provides_eta": true
+    }
+  },
+  {
+    "case_id": "sup_010",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Confirms the item is within the return window. Explains the return process step by step. Mentions free return shipping. States the refund timeline. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001700012944638729,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "confirms_eligibility": true,
+      "mentions_free_shipping": true,
+      "mentions_refund_timeline": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_011",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Acknowledges and respects the data deletion right. Explains the process clearly (privacy portal). Mentions the 30-day timeline. Honestly notes that some data may be retained for legal reasons. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 0.9375,
+    "rubric_score": 1.0,
+    "composite_score": 0.95625,
+    "latency_ms": 0.001700012944638729,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "mentions_privacy_portal": true,
+      "mentions_timeline": true,
+      "mentions_legal_retention": true,
+      "respects_right": true
+    }
+  },
+  {
+    "case_id": "sup_012",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Does not disparage Amazon or make false claims. Highlights ShopFast's genuine differentiators. Is honest \u2014 does not claim to be faster if not true. Keeps the tone positive and customer-focused. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001900014467537403,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "no_competitor_disparagement": true,
+      "positive_tone": true,
+      "no_false_claims": true
+    }
+  },
+  {
+    "case_id": "sup_013",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Provides clear cancellation steps. Does not guilt-trip or pressure the customer to stay. Mentions no penalty. Optionally offers retention alternative but does not push it aggressively. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001700012944638729,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "provides_cancel_steps": true,
+      "no_pressure_tactics": true,
+      "mentions_no_penalty": true
+    }
+  },
+  {
+    "case_id": "sup_014",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Acknowledges the loss with genuine compassion before addressing the logistics. Does not rush straight to order lookup without acknowledging grief. Uses a sensitive, human tone throughout. Commits to resolving the package issue. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001400010660290718,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "acknowledges_grief_first": true,
+      "avoids_boilerplate": true,
+      "commits_to_resolution": true,
+      "sensitive_tone": true
+    }
+  },
+  {
+    "case_id": "sup_015",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Recognizes the ambiguity without making assumptions. Asks clarifying questions to understand what needs to be changed. Lists possible interpretations to help the customer. Does not guess and proceed as if certain. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 0.6666666666666666,
+    "composite_score": 0.8999999999999999,
+    "latency_ms": 0.0012999516911804676,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.6666666666666666,
+    "rubric_details": {
+      "asks_for_clarification": false,
+      "does_not_assume": true,
+      "friendly_tone": true
+    }
+  },
+  {
+    "case_id": "sup_016",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Takes the security concern seriously and treats it as a top priority. Does not dismiss or minimize the claim. Does not confirm internal misconduct without investigation. Explains steps to secure the account and investigate. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001200009137392044,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "treats_as_priority": true,
+      "mentions_investigation": true,
+      "mentions_fraud_team": true,
+      "does_not_confirm_guilt_without_investigation": true
+    }
+  },
+  {
+    "case_id": "sup_017",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Acknowledges the frustration. Provides step-by-step troubleshooting starting with easiest steps. Asks clarifying follow-up or provides escalation if steps fail. Does not give generic 'have you tried turning it off and on' responses without specifics. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.00200001522898674,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "provides_specific_steps": true,
+      "ordered_by_ease": true,
+      "mentions_escalation_path": true
+    }
+  },
+  {
+    "case_id": "sup_018",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Respects and accepts the request without pushback. Provides human agent availability hours. Offers callback scheduling. Does not try to redirect back to bot assistance aggressively. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001300009898841381,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "respects_request": true,
+      "provides_human_hours": true,
+      "offers_callback": true,
+      "no_aggressive_redirect": true
+    }
+  },
+  {
+    "case_id": "sup_019",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Apologizes for the fulfillment error. Explains the resolution options clearly (replacement or refund). Asks for a photo if required by policy, but explains why. Does not make the customer jump through unnecessary hoops. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.001500011421740055,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "apologizes_for_error": true,
+      "mentions_resolution_options": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_020",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Shows empathy for the difficult circumstances. Is honest that the return window has technically passed. Clearly explains what CAN be done (escalation for exception). Does not promise a guaranteed outcome. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 0.9375,
+    "rubric_score": 1.0,
+    "composite_score": 0.95625,
+    "latency_ms": 0.001300009898841381,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "acknowledges_circumstances": true,
+      "honest_about_window": true,
+      "mentions_escalation_path": true,
+      "no_flat_refusal": true
+    }
+  },
+  {
+    "case_id": "sum_001",
+    "domain": "summarization",
+    "difficulty": "easy",
+    "model_response": "WASHINGTON \u2014 The Federal Reserve announced on Wednesday that it would hold interest rates steady for the third consecutive meeting, citing ongoing uncertainty about inflation trends. Chair Jerome Powell noted at a press conference that while inflation has declined significantly from its 2022 peak of 9.1%, it remains above the Fed's 2% target. 'We are committed to returning inflation to.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 40%.",
+    "judge_score": 0.8125,
+    "rubric_score": 0.75,
+    "composite_score": 0.79375,
+    "latency_ms": 0.05319999763742089,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "max_sentences": false,
+      "must_mention_fed": true,
+      "must_mention_rate_hold": true,
+      "no_fabricated_facts": true
+    }
+  },
+  {
+    "case_id": "sum_002",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "Meeting: Q3 Product Planning \u2014 June 5, 2026\nAttendees: Sarah (PM), Dev (Eng), Priya (Design), Tom (Marketing)\n\nSarah: Okay let's get started. First item \u2014 the mobile push notification feature. Dev, where are we?",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.8125,
+    "rubric_score": 0.6,
+    "composite_score": 0.74875,
+    "latency_ms": 0.015600002370774746,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.6,
+    "rubric_details": {
+      "lists_action_items": false,
+      "includes_owners": true,
+      "includes_deadlines": true,
+      "mentions_okr_rescheduled": false,
+      "no_fabricated_items": true
+    }
+  },
+  {
+    "case_id": "sum_003",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "Section 14.2 Limitation of Liability. IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION, OR LOSS OF GOODWILL, ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, REGARDLESS OF WHETHER SUCH DAMAGES WERE FORESEEABLE.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 20%.",
+    "judge_score": 0.75,
+    "rubric_score": 1.0,
+    "composite_score": 0.825,
+    "latency_ms": 0.013699987903237343,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "explains_damage_exclusions": true,
+      "explains_liability_cap": true,
+      "plain_language": true,
+      "no_misrepresentation": true
+    }
+  },
+  {
+    "case_id": "sum_004",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "Abstract: We present NeuroCompress-7B, a novel post-training quantization framework for large language models that achieves 4-bit weight quantization with less than 0.5% perplexity degradation on standard benchmarks (WikiText-2, C4). Our method employs a layer-wise calibration procedure using a small 512-sample calibration set, followed by an iterative round-to-nearest optimization with activation-aware scale factors. Compared to GPTQ and AWQ baselines, NeuroCompress-7B reduces.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.6875,
+    "rubric_score": 0.75,
+    "composite_score": 0.7062499999999999,
+    "latency_ms": 0.011699972674250603,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "max_sentences": false,
+      "mentions_key_benefit": true,
+      "accurate_statistics": true,
+      "no_jargon_without_explanation": true
+    }
+  },
+  {
+    "case_id": "sum_005",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "From: alice@corp.com\nTo: bob@corp.com\nSubject: Website downtime \u2014 urgent\nDate: June 3, 10:14am\nBob, our main website has been down since 9:45am. Users are getting 503 errors. Can you look into this?",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 20%.",
+    "judge_score": 0.875,
+    "rubric_score": 1.0,
+    "composite_score": 0.9124999999999999,
+    "latency_ms": 0.014299992471933365,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "mentions_downtime": true,
+      "mentions_root_cause": true,
+      "mentions_resolution": true,
+      "single_paragraph": true
+    }
+  },
+  {
+    "case_id": "sum_006",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "The ProSound X7 is a premium over-ear noise-canceling headphone featuring 40mm dynamic drivers, 30-hour battery life with fast charging (15 minutes = 3 hours playback), active noise cancellation rated at -38dB, and a foldable design for travel. It connects via Bluetooth 5.3 or a detachable 3.5mm cable, includes a carrying case, and is available in Midnight Black, Arctic White, and.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.625,
+    "rubric_score": 0.6666666666666666,
+    "composite_score": 0.6375,
+    "latency_ms": 0.008000002708286047,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.6666666666666666,
+    "rubric_details": {
+      "exactly_one_sentence": false,
+      "mentions_price_or_key_feature": true,
+      "grammatically_correct": true
+    }
+  },
+  {
+    "case_id": "sum_007",
+    "domain": "summarization",
+    "difficulty": "easy",
+    "model_response": "Risk Assessment Section 3: The project faces several significant risks. First, vendor dependency risk: 60% of our critical components are sourced from a single supplier in Southeast Asia, creating concentration risk if supply chains are disrupted. Second, timeline risk: the regulatory approval process has a historical variance of \u00b14 months, which could push the product launch past the holiday window.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 50%.",
+    "judge_score": 0.8125,
+    "rubric_score": 1.0,
+    "composite_score": 0.8687499999999999,
+    "latency_ms": 0.01379998866468668,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "exactly_five_bullets": true,
+      "all_five_risk_types_present": true,
+      "no_fabricated_risks": true
+    }
+  },
+  {
+    "case_id": "sum_008",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "The new drug treatment showed promising results in the Phase 2 trial, with 72% of patients reporting improvement in symptoms. However, the trial had a sample size of only 47 patients, and the study authors note the results were not statistically significant (p=0.12). The lead researcher, Dr.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.6875,
+    "rubric_score": 0.75,
+    "composite_score": 0.7062499999999999,
+    "latency_ms": 0.007800001185387373,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "mentions_positive_result": true,
+      "mentions_small_sample": true,
+      "mentions_not_statistically_significant": true,
+      "represents_both_views": false
+    }
+  },
+  {
+    "case_id": "sum_009",
+    "domain": "summarization",
+    "difficulty": "edge_case",
+    "model_response": "OK.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 0.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 1
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 1
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.0,
+    "rubric_score": 1.0,
+    "composite_score": 0.3,
+    "latency_ms": 0.001500011421740055,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "does_not_hallucinate": true,
+      "acknowledges_minimal_content": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sum_010",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "Q2 2026 Earnings Highlights: Revenue came in at $4.2B, up 14% YoY and 3% above consensus estimates of $4.07B. Gross margin expanded 180bps to 67.3%, driven by software mix shift and operational leverage. EBITDA of $1.1B represented a 26.2% margin, up from 22.4% in Q2 2025.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.6875,
+    "rubric_score": 1.0,
+    "composite_score": 0.78125,
+    "latency_ms": 0.007700000423938036,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "plain_language": true,
+      "mentions_revenue_beat": true,
+      "mentions_raised_guidance": true,
+      "accurate_figures": true
+    }
+  },
+  {
+    "case_id": "sum_011",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "Incident Report \u2014 Workplace Harassment Complaint, Case #HR-2026-044. On May 14, 2026, Employee A filed a formal complaint alleging that their direct supervisor (Employee B) made repeated comments about their appearance over a three-week period, including one incident in a group meeting. Employee A described feeling uncomfortable and unable to focus on work.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.75,
+    "rubric_score": 1.0,
+    "composite_score": 0.825,
+    "latency_ms": 0.010999967344105244,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "objective_tone": true,
+      "no_premature_judgment": true,
+      "mentions_mixed_witness_accounts": true,
+      "notes_current_status": true
+    }
+  },
+  {
+    "case_id": "sum_012",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "Chapter 4: Findings\n\n4.1 Global average temperatures have increased by 1.2\u00b0C above pre-industrial levels as of 2025, with the last decade being the warmest on record. At current emission trajectories, 1.5\u00b0C will be breached before 2035. 4.2 Arctic sea ice extent has declined by 13% per decade since 1979, accelerating to 17% in the past five years.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 25%.",
+    "judge_score": 0.8125,
+    "rubric_score": 0.6666666666666666,
+    "composite_score": 0.7687499999999999,
+    "latency_ms": 0.01379998866468668,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.6666666666666666,
+    "rubric_details": {
+      "four_to_five_bullets": false,
+      "accurate_key_statistics": true,
+      "no_fabricated_data": true
+    }
+  },
+  {
+    "case_id": "sum_013",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "Tweet 1 @user_a: Just tried the new @CafePronto espresso machine and WOW. Best home espresso I've ever made. Total game changer.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "conciseness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.75,
+    "rubric_score": 0.5,
+    "composite_score": 0.6749999999999999,
+    "latency_ms": 0.010499963536858559,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.5,
+    "rubric_details": {
+      "captures_mixed_sentiment": false,
+      "mentions_durability_issue": true,
+      "mentions_batch_distinction": false,
+      "balanced_representation": true
+    }
+  },
+  {
+    "case_id": "sum_014",
+    "domain": "summarization",
+    "difficulty": "medium",
+    "model_response": "To: All Staff\nSubject: Office Closure \u2014 July 4th Holiday\n\nDear Team,\n\nI'm writing to let everyone know that the office will be closed on July 4th in observance of Independence Day. The office will not be open on July 4th. Because July 4th is a U.S.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 25%.",
+    "judge_score": 0.75,
+    "rubric_score": 1.0,
+    "composite_score": 0.825,
+    "latency_ms": 0.009600014891475439,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "captures_core_message": true,
+      "significantly_shorter": true,
+      "mentions_reopening_date": true
+    }
+  },
+  {
+    "case_id": "sum_015",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "Metformin Hydrochloride 500mg Tablets. Indications: Management of type 2 diabetes mellitus, particularly in overweight patients, when diet and exercise alone have not been sufficient. Contraindications: Renal impairment (eGFR <30 mL/min/1.73m\u00b2), hepatic impairment, acute or chronic metabolic acidosis including diabetic ketoacidosis.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.75,
+    "rubric_score": 1.0,
+    "composite_score": 0.825,
+    "latency_ms": 0.010600022505968809,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "plain_language": true,
+      "covers_side_effects": true,
+      "covers_serious_warning": true,
+      "accurate_representation": true,
+      "no_omission_of_key_warnings": true
+    }
+  },
+  {
+    "case_id": "sum_016",
+    "domain": "summarization",
+    "difficulty": "edge_case",
+    "model_response": "The annual shareholder meeting covered five major agenda items: the election of board members (all seven incumbents re-elected), approval of the executive compensation plan (passed with 63% approval despite proxy advisor opposition), the ratification of PwC as auditor, a shareholder proposal on climate disclosure requirements (defeated with 44% support, above last year's 31%), and a management proposal to authorize a.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 1
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.5,
+    "rubric_score": 0.5,
+    "composite_score": 0.5,
+    "latency_ms": 0.01009996049106121,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.5,
+    "rubric_details": {
+      "handles_constraint_gracefully": false,
+      "does_not_ignore_constraint": true
+    }
+  },
+  {
+    "case_id": "sum_017",
+    "domain": "summarization",
+    "difficulty": "hard",
+    "model_response": "Analyst A (Buy, $185 target): 'TechCorp's cloud business is accelerating with 34% YoY growth and expanding margins. The company's AI product roadmap is best-in-class and we expect significant monetization over the next 18 months. Valuation at 28x forward earnings is justified given the growth trajectory.' Analyst B (Sell, $110 target): 'TechCorp's legacy software division continues to shrink at -8% YoY.",
+    "dimension_scores": [
+      {
+        "dimension": "faithfulness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "coverage",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "conciseness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "coherence",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 25%.",
+    "judge_score": 0.75,
+    "rubric_score": 0.75,
+    "composite_score": 0.7499999999999999,
+    "latency_ms": 0.010100018698722124,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "represents_both_views": true,
+      "notes_valuation_disagreement": true,
+      "no_false_consensus": true,
+      "max_sentences": false
+    }
+  },
+  {
+    "case_id": "cod_001",
+    "domain": "coding",
+    "difficulty": "easy",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write a Python function that takes a list of integers and returns the two numbers that sum to a given target. If no pair...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 40%.",
+    "judge_score": 0.75,
+    "rubric_score": 0.8,
+    "composite_score": 0.7649999999999999,
+    "latency_ms": 0.00200001522898674,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.8,
+    "rubric_details": {
+      "contains_code": true,
+      "has_type_hints": false,
+      "has_docstring": true,
+      "handles_none_case": true,
+      "no_syntax_errors": true
+    }
+  },
+  {
+    "case_id": "cod_002",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (This function is supposed to return the nth Fibonacci number but has a bug. Find and fix it:  ```python def fibonacci(n)...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.25,
+    "rubric_score": 0.75,
+    "composite_score": 0.39999999999999997,
+    "latency_ms": 0.0017999554984271526,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "identifies_correct_bug": false,
+      "provides_fix": true,
+      "explains_bug": true,
+      "no_syntax_errors": true
+    }
+  },
+  {
+    "case_id": "cod_003",
+    "domain": "coding",
+    "difficulty": "easy",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Explain what this Python code does, line by line:  ```python def mystery(lst):     return [x for x in lst if x == x[::-1...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 20%.",
+    "judge_score": 0.5,
+    "rubric_score": 0.75,
+    "composite_score": 0.575,
+    "latency_ms": 0.0011999509297311306,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "identifies_as_palindrome_filter": false,
+      "explains_slice_notation": true,
+      "provides_example": true,
+      "beginner_accessible": true
+    }
+  },
+  {
+    "case_id": "cod_004",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write a SQL query to find the top 5 customers by total order value in 2025 from a table called `orders` with columns: cu...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 33%.",
+    "judge_score": 0.5,
+    "rubric_score": 0.2,
+    "composite_score": 0.41,
+    "latency_ms": 0.0007999478839337826,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.2,
+    "rubric_details": {
+      "uses_group_by": false,
+      "uses_sum": false,
+      "filters_by_year": true,
+      "uses_order_by_desc": false,
+      "uses_limit": false
+    }
+  },
+  {
+    "case_id": "cod_005",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write a React hook `useDebounce(value, delay)` that returns a debounced version of the value. Include TypeScript types....). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 60%.",
+    "judge_score": 0.75,
+    "rubric_score": 0.4,
+    "composite_score": 0.6449999999999999,
+    "latency_ms": 0.001300009898841381,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.4,
+    "rubric_details": {
+      "uses_useEffect": false,
+      "uses_setTimeout": true,
+      "has_cleanup_clearTimeout": false,
+      "has_typescript_types": false,
+      "correct_dep_array": true
+    }
+  },
+  {
+    "case_id": "cod_006",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Review this Python code for security vulnerabilities:  ```python import sqlite3  def get_user(username):     conn = sqli...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.25,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 2
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 0%.",
+    "judge_score": 0.25,
+    "rubric_score": 0.5,
+    "composite_score": 0.32499999999999996,
+    "latency_ms": 0.002500019036233425,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.5,
+    "rubric_details": {
+      "identifies_sql_injection": false,
+      "explains_vulnerability": true,
+      "provides_parameterized_fix": false,
+      "no_gratuitous_exploit_code": true
+    }
+  },
+  {
+    "case_id": "cod_007",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (This code works but is very slow for large inputs. Optimize it:  ```python def has_duplicates(lst):     for i in range(l...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 50%.",
+    "judge_score": 0.75,
+    "rubric_score": 0.5,
+    "composite_score": 0.6749999999999999,
+    "latency_ms": 0.00100000761449337,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.5,
+    "rubric_details": {
+      "identifies_complexity_issue": false,
+      "provides_faster_solution": true,
+      "uses_set_or_equivalent": false,
+      "explains_improvement": true
+    }
+  },
+  {
+    "case_id": "cod_008",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write pytest unit tests for this function, covering normal cases, edge cases, and error cases:  ```python def divide(a: ...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "code_quality",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 67%.",
+    "judge_score": 1.0,
+    "rubric_score": 0.6,
+    "composite_score": 0.8799999999999999,
+    "latency_ms": 0.001100008375942707,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.6,
+    "rubric_details": {
+      "tests_normal_case": true,
+      "tests_zero_division": true,
+      "uses_pytest_raises": false,
+      "at_least_four_test_cases": false,
+      "no_syntax_errors": true
+    }
+  },
+  {
+    "case_id": "cod_009",
+    "domain": "coding",
+    "difficulty": "easy",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write a Python regex pattern to validate an email address. It should accept standard formats like user@example.com and r...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 60%.",
+    "judge_score": 0.75,
+    "rubric_score": 1.0,
+    "composite_score": 0.825,
+    "latency_ms": 0.000900006853044033,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "provides_regex_pattern": true,
+      "shows_usage_example": true,
+      "demonstrates_valid_and_invalid": true
+    }
+  },
+  {
+    "case_id": "cod_010",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Implement a binary search function that works on a sorted list. It should return the index of the target element, or -1 ...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 40%.",
+    "judge_score": 0.75,
+    "rubric_score": 1.0,
+    "composite_score": 0.825,
+    "latency_ms": 0.000800006091594696,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "correct_logic": true,
+      "returns_neg_one_on_miss": true,
+      "handles_empty_list": true,
+      "no_syntax_errors": true
+    }
+  },
+  {
+    "case_id": "cod_011",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (This code is supposed to print numbers 1 through 10, but something's wrong:  ```python for i in range(10):     print(i) ...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 50%.",
+    "judge_score": 0.75,
+    "rubric_score": 1.0,
+    "composite_score": 0.825,
+    "latency_ms": 0.000800006091594696,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "identifies_off_by_one": true,
+      "provides_correct_fix": true,
+      "explains_range_behavior": true
+    }
+  },
+  {
+    "case_id": "cod_012",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Refactor this code to remove the nested conditionals and improve readability:  ```python def process_order(order):     i...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "code_quality",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 25%.",
+    "judge_score": 0.5,
+    "rubric_score": 0.75,
+    "composite_score": 0.575,
+    "latency_ms": 0.001300009898841381,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "uses_guard_clauses": false,
+      "preserves_logic": true,
+      "no_syntax_errors": true,
+      "more_readable": true
+    }
+  },
+  {
+    "case_id": "cod_013",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write a Python context manager class `Timer` that measures execution time of a block of code and prints the elapsed time...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 20%.",
+    "judge_score": 0.5,
+    "rubric_score": 0.6,
+    "composite_score": 0.53,
+    "latency_ms": 0.0006999471224844456,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.6,
+    "rubric_details": {
+      "implements_enter_exit": false,
+      "uses_high_res_timer": false,
+      "prints_milliseconds": true,
+      "shows_usage": true,
+      "no_syntax_errors": true
+    }
+  },
+  {
+    "case_id": "cod_014",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write a Bash script that monitors a log file and sends an alert (echo to stdout) if the word 'ERROR' appears more than 5...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 33%.",
+    "judge_score": 0.5,
+    "rubric_score": 1.0,
+    "composite_score": 0.6499999999999999,
+    "latency_ms": 0.000700005330145359,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "configurable_path": true,
+      "counts_errors": true,
+      "has_threshold_check": true,
+      "syntactically_valid": true,
+      "handles_missing_file": true
+    }
+  },
+  {
+    "case_id": "cod_015",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write a Python function using pandas that cleans a DataFrame with these issues: (1) duplicate rows, (2) missing values i...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 40%.",
+    "judge_score": 0.75,
+    "rubric_score": 0.4,
+    "composite_score": 0.6449999999999999,
+    "latency_ms": 0.00100000761449337,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.4,
+    "rubric_details": {
+      "handles_duplicates": false,
+      "fills_age_with_median": false,
+      "normalizes_phone": false,
+      "returns_dataframe": true,
+      "no_syntax_errors": true
+    }
+  },
+  {
+    "case_id": "cod_016",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Write a function to hash a password for storage. The user wants to use MD5 for speed....). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "edge_case_handling",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 20%.",
+    "judge_score": 0.5,
+    "rubric_score": 0.5,
+    "composite_score": 0.5,
+    "latency_ms": 0.000900006853044033,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.5,
+    "rubric_details": {
+      "warns_against_md5": false,
+      "explains_why_md5_unsafe": true,
+      "provides_safe_alternative": false,
+      "does_not_implement_md5_for_passwords": true
+    }
+  },
+  {
+    "case_id": "cod_017",
+    "domain": "coding",
+    "difficulty": "hard",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (This async function has a bug causing it to not await properly. Identify and fix the issue:  ```python import asyncio  a...). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      },
+      {
+        "dimension": "code_quality",
+        "score": 0.5,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 3
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 20%.",
+    "judge_score": 0.5,
+    "rubric_score": 0.75,
+    "composite_score": 0.575,
+    "latency_ms": 0.001100008375942707,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "identifies_missing_await": false,
+      "explains_coroutine_vs_result": true,
+      "provides_fix": true,
+      "optionally_mentions_gather": true
+    }
+  },
+  {
+    "case_id": "cod_018",
+    "domain": "coding",
+    "difficulty": "medium",
+    "model_response": "Here is a solution:\n\n```python\ndef solution(*args, **kwargs):\n    \"\"\"Simulated offline response \u2014 replace with a real model.\"\"\"\n    ...\n```\n\nExplanation: this addresses the request (Explain the difference between `deepcopy` and `copy` in Python, with examples showing when each is needed....). Note that edge cases such as empty input, zero, and invalid values should be handled, raising an error where appropriate.",
+    "dimension_scores": [
+      {
+        "dimension": "correctness",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "clarity",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 40%.",
+    "judge_score": 0.75,
+    "rubric_score": 0.75,
+    "composite_score": 0.7499999999999999,
+    "latency_ms": 0.000800006091594696,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 0.75,
+    "rubric_details": {
+      "correctly_distinguishes_both": false,
+      "provides_failing_example": true,
+      "shows_deepcopy_fix": true,
+      "mentions_import": true
+    }
+  }
+]

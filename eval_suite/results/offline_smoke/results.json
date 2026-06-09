@@ -1,0 +1,282 @@
+[
+  {
+    "case_id": "sup_001",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Acknowledges the customer's frustration and urgency. Apologizes for the delay. Offers to look up the order status. Provides actionable next steps or alternatives. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 0.95,
+    "rubric_score": 1.0,
+    "composite_score": 0.9649999999999999,
+    "latency_ms": 0.006699992809444666,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "contains_apology": true,
+      "mentions_order_lookup": true,
+      "max_length_words": true,
+      "avoids_blame_language": true
+    }
+  },
+  {
+    "case_id": "sup_002",
+    "domain": "support",
+    "difficulty": "easy",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Provides clear step-by-step instructions. Mentions both paths (settings and forgot password link). Notes the 24-hour expiration. Offers further help if needed. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.003400025889277458,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "contains_steps": true,
+      "mentions_expiry": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_003",
+    "domain": "support",
+    "difficulty": "medium",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Acknowledges the double charge concern with empathy. Apologizes for the inconvenience. Explains the investigation process. Commits to a resolution timeline. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 0.95,
+    "rubric_score": 1.0,
+    "composite_score": 0.9649999999999999,
+    "latency_ms": 0.0034999684430658817,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "contains_apology": true,
+      "mentions_refund_or_investigation": true,
+      "avoids_accusatory_language": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_004",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Treats this as a high-priority safety incident immediately. Expresses genuine concern for the child's wellbeing. Does NOT downplay the safety concern. Offers full refund and/or product recall consideration. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 0.75,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 4
+      },
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 83%.",
+    "judge_score": 0.95,
+    "rubric_score": 1.0,
+    "composite_score": 0.9649999999999999,
+    "latency_ms": 0.002200016751885414,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "expresses_safety_urgency": true,
+      "mentions_escalation": true,
+      "offers_refund": true,
+      "avoids_defensive_language": true
+    }
+  },
+  {
+    "case_id": "sup_005",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Remains calm and professional despite hostile tone. Does not mirror aggression or become defensive. Acknowledges the frustration without agreeing to fraudulent claims. Moves toward resolution by asking for order details. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "empathy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "safety",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 80%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.002500019036233425,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "tone_remains_professional": true,
+      "does_not_capitulate_entirely": true,
+      "asks_for_details": true,
+      "max_length_words": true
+    }
+  },
+  {
+    "case_id": "sup_006",
+    "domain": "support",
+    "difficulty": "hard",
+    "model_response": "I'm so sorry to hear about this, and I completely understand your frustration. Thank you for bringing it to our attention. Addresses all three issues explicitly \u2014 does not ignore any. Numbers or organizes the response clearly. Explains next steps for each issue. Does not conflate separate issues. First, I will look into your account details right away. Next, I will follow up with you within 1 business day with an update. If needed, I can escalate this to a specialist team. Please let me know if there is anything else I can help with.",
+    "dimension_scores": [
+      {
+        "dimension": "accuracy",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "completeness",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      },
+      {
+        "dimension": "actionability",
+        "score": 1.0,
+        "rationale": "Heuristic (offline) score based on keyword/structure checks.",
+        "raw_score": 5
+      }
+    ],
+    "judge_overall_comment": "Offline heuristic evaluation (no LLM judge). Ideal-criteria keyword coverage: 100%.",
+    "judge_score": 1.0,
+    "rubric_score": 1.0,
+    "composite_score": 1.0,
+    "latency_ms": 0.0022999593056738377,
+    "error": "",
+    "skipped": false,
+    "rubric_pass_rate": 1.0,
+    "rubric_details": {
+      "addresses_all_three_issues": true,
+      "structured_response": true,
+      "max_length_words": true
+    }
+  }
+]

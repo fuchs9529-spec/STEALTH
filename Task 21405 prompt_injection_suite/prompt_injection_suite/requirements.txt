@@ -1,0 +1,12 @@
+# prompt_injection_suite/requirements.txt
+# All harness functionality (including dry-run) uses Python stdlib only.
+# The packages below are optional enhancements.
+
+# Optional: richer CLI output
+# rich>=13.0
+
+# Optional: judge-LLM scoring (replaces heuristics)
+# openai>=1.0
+
+# Optional: async parallel test execution
+# httpx>=0.26
